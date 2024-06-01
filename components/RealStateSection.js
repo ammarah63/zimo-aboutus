@@ -77,7 +77,7 @@ const RealStateSection = () => {
               CONNECTING USERS FROM ACROSS THE GLOBE
             </p>
             <p className="text-center text-sm tracking-widest">
-              TO FACILITATE LIFE'S MOST IMPORTANT
+              TO FACILITATE LIFE&apos;S MOST IMPORTANT
             </p>
             <p className="text-center text-sm tracking-widest">
               PERSONAL TRANSACTIONS
