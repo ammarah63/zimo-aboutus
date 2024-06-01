@@ -54,7 +54,7 @@ const OurCategories = () => {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-4 gap-4 mt-12">
+      <div className="grid grid-cols-4 gap-2 lg:gap-4 mt-12">
         {images.slice(currentIndex, currentIndex + 4).map((image, index) => (
           <div key={index} className="relative">
             <div className="flex items-end justify-center relative">
@@ -62,21 +62,21 @@ const OurCategories = () => {
                 src={image.src}
                 width={100}
                 height={100}
-                className="min-h-full min-w-64"
+                className="min-h-full lg:min-w-64 min-32 md:min-h-48 "
               />
             </div>
             <div class="absolute inset-0 bg-gray-700 opacity-60"></div>
             <div className="absolute inset-0 flex items-end justify-center">
-              <p className="text-white text-base-50 py-2" data-aos="fade-up">
+              <p className="text-white text-xs lg:text-base-50 py-2" data-aos="fade-up">
                 {image.text}
               </p>
             </div>
           </div>
         ))}
       </div>
-      <div className="mt-14">
+      <div className="mt-7 lg:mt-14">
         <p
-          className="text-center text-3xl tracking-widest"
+          className="text-center lg:text-3xl text:lg tracking-widest"
           data-aos="fade-up"
           data-aos-once="true"
         >
@@ -85,7 +85,7 @@ const OurCategories = () => {
       </div>
       <div>
         <p
-          className="text-center text-2xl mt-14 tracking-widest"
+          className="text-center lg:text-2xl text-base  mt-7 lg:mt-14 tracking-widest"
           data-aos="fade-up"
           data-aos-once="true"
         >

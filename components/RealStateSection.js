@@ -43,7 +43,7 @@ const RealStateSection = () => {
       <div className="bg-white bg-center h-screen py-5 px-10 ">
         <div id="realStateSection">
           <p
-            className="text-center  text-sm tracking-widest"
+            className="text-center  text-xs lg:text-sm tracking-widest"
             data-aos="fade-up"
             data-aos-once="true"
           >
@@ -56,9 +56,15 @@ const RealStateSection = () => {
           data-aos-once="true"
         >
           <div>
-            <p className="text-2xl tracking-widest">A REVOLUTIONARY PLATFORM</p>
-            <p className="text-4xl mt-2 tracking-widest">ENTRIES - SELLERS</p>
-            <p className="text-5xl mt-2 tracking-widest">WORLDWIDE</p>
+            <p className="text-base lg:text-2xl tracking-widest">
+              A REVOLUTIONARY PLATFORM
+            </p>
+            <p className="text-lg lg:text-4xl mt-2 tracking-widest">
+              ENTRIES - SELLERS
+            </p>
+            <p className="text-xl  lg:text-5xl mt-2 tracking-widest">
+              WORLDWIDE
+            </p>
           </div>
           <div></div>
         </div>
@@ -70,16 +76,16 @@ const RealStateSection = () => {
                 src={logo}
                 width={100}
                 height={100}
-                className=" min-h-20 min-w-96"
+                className="min-w-64 lg:min-h-20 lg:min-w-96"
               />
             </div>
-            <p className="text-center text-sm tracking-widest mt-7">
+            <p className="text-center text:xs lg:text-sm tracking-widest mt-7">
               CONNECTING USERS FROM ACROSS THE GLOBE
             </p>
-            <p className="text-center text-sm tracking-widest">
+            <p className="text-center  text:xs lg:text-sm tracking-widest">
               TO FACILITATE LIFE&apos;S MOST IMPORTANT
             </p>
-            <p className="text-center text-sm tracking-widest">
+            <p className="text-center  text:xs lg:text-sm tracking-widest">
               PERSONAL TRANSACTIONS
             </p>
           </div>
@@ -90,8 +96,10 @@ const RealStateSection = () => {
             data-aos-once="true"
             className="overflow-hidden"
           >
-            <p className="text-3xl tracking-widest">THE BEST OF THE BEST</p>
-            <p className="tracking-widest text-sm mt-7">
+            <p className="text-base lg:text-3xl tracking-widest">
+              THE BEST OF THE BEST
+            </p>
+            <p className="tracking-widest text-xs lg:text-sm mt-7">
               A COMBINATION OF AUTOMATION AND MANUAL CURATION OUR PRO AGENTS AND
               MODERATION TEAM SELECTS THE HIGHEST QUALITY LISTINGS ON THE MARKET
               FROM ACROSS THE WORLD.
