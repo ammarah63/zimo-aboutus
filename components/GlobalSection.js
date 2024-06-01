@@ -8,11 +8,11 @@ const GlobalSection = () => {
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
         }}
-        className="bg-cover bg-center h-screen p-10 text-black text-center flex justify-center items-center"
+        className="bg-cover bg-center h-screen px-5 lg:p-10 text-black text-center flex justify-center items-center"
       >
         <div>
           <p
-            className="text-2xl tracking-widest"
+            className="text-lg lg:text-2xl tracking-widest"
             data-aos="fade-up"
             data-aos-once="true"
           >
@@ -20,14 +20,14 @@ const GlobalSection = () => {
           </p>
 
           <p
-            className="text-sm tracking-widest mt-7 text-center"
+            className="text-xs lg:text-sm tracking-widest mt-7 text-center"
             data-aos="fade-up"
             data-aos-once="true"
           >
             WITH A REMOTE CULTURE, DIVERSITY IS NATURALLY IN OUR DNA.
           </p>
           <p
-            className="text-sm tracking-widest mt-2 text-center"
+            className="text-xs lg:text-sm tracking-widest mt-2 text-center"
             data-aos="fade-up"
             data-aos-once="true"
           >

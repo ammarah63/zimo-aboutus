@@ -7,7 +7,7 @@ const ZimoPartnersDection = () => {
   return (
     <>
       <div className="bg-cover bg-center bg-white h-screen text-black text-center">
-        <div className="grid grid-cols-3 gap-2 h-screen">
+        <div className="grid grid-cols-3 gap-1 h-screen">
           <div className="flex justify-center">
             <Image
               src={pic2}

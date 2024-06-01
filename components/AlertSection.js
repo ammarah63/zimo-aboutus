@@ -13,21 +13,21 @@ const AlertSection = () => {
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
         }}
-        className="bg-cover bg-center h-screen p-10 text-white"
+        className="bg-cover bg-center h-screen p-2 lg:p-10 text-white"
       >
-        <div className="grid grid-cols-2 gap-2 px-10 mt-5 overflow-x-hidden">
+        <div className="grid grid-cols-2 gap-1 px-0 lg:px-10 mt-5 overflow-x-hidden">
           <div></div>
-          <div className="ml-auto" data-aos="fade-left" data-aos-once="true">
-            <p className="text-2xl tracking-widest">PERSONALISED FOR YOU</p>
-            <div className="w-[30vw]">
-              <p className="text-sm tracking-widest mt-7 opacity-45 text-justify">
+          <div className="ml-auto me-0 pe-0" data-aos="fade-left" data-aos-once="true">
+            <p className="text-lg lg:text-2xl tracking-widest">PERSONALISED FOR YOU</p>
+            <div className="w-[45vw] lg:w-[30vw]">
+              <p className="text-xs lg:text-sm tracking-widest mt-7 opacity-45 text-justify">
                 DELIVERING THOUSANDS OF PERSONALISED ALERTS EVERYDAY, OUR USERS
                 CAN BE FIRST IN LINE WHEN THAT OPPORTUNITY OF A LIFETIME IS HERE
               </p>
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-2 px-10 mt-5">
+        <div className="grid grid-cols-2 gap-1 px-10 mt-5">
           <div>
             <Image
               src={pic1}
@@ -41,7 +41,7 @@ const AlertSection = () => {
           <div className="ml-auto">
             <div className="flex">
               <p
-                className="text-sm tracking-widest mt-24 text-justify"
+                className="text-xs lg:text-sm tracking-widest mt-24 text-justify"
                 data-aos="fade-up"
                 data-aos-once="true"
               >
