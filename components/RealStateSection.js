@@ -40,7 +40,7 @@ const RealStateSection = () => {
 
   return (
     <>
-      <div className="bg-white bg-center h-screen py-5 px-10 ">
+      <div className="bg-white bg-center h-screen py-5 px-5 lg:px-10 ">
         <div id="realStateSection">
           <p
             className="text-center  text-xs lg:text-sm tracking-widest"
@@ -51,7 +51,7 @@ const RealStateSection = () => {
           </p>
         </div>
         <div
-          className="grid grid-cols-2 gap-4 mt-12 "
+          className="grid grid-cols-2 gap-1 mt-12 "
           data-aos="fade-right"
           data-aos-once="true"
         >
@@ -68,7 +68,7 @@ const RealStateSection = () => {
           </div>
           <div></div>
         </div>
-        <div className="grid grid-cols-2 gap-4  !overflow-hidden">
+        <div className="grid grid-cols-2 gap-1  !overflow-hidden">
           <div></div>
           <div className="ml-auto" data-aos="fade-left" data-aos-once="true">
             <div className="flex items-center justify-center">
@@ -90,7 +90,7 @@ const RealStateSection = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4 -mt-10">
+        <div className="grid grid-cols-2 gap-1 -mt-10">
           <div
             data-aos="fade-right"
             data-aos-once="true"
