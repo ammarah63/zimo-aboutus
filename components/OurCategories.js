@@ -7,7 +7,7 @@ import pic1 from "../public/images/Rectangle 9442.svg";
 import pic2 from "../public/images/Component 1 – 1.svg";
 import pic3 from "../public/images/Rectangle 9441.svg";
 import pic4 from "../public/images/Rectangle 944.svg";
-import pic5 from "../public/images/Rectangle 9446.svg"; 
+import pic5 from "../public/images/Rectangle 9446.svg";
 import pic6 from "../public/images/Rectangle 9447.svg";
 
 const OurCategories = () => {

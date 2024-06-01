@@ -131,23 +131,23 @@ const HomeSection = () => {
         style={{
           backgroundImage: "url('/images/2023-01-19_22-48-19.svg')",
         }}
-        className="bg-cover bg-center h-screen p-10 text-white"
+        className="bg-cover bg-center h-screen lg:p-10 p-5 text-white"
       >
         <div className="grid grid-cols-6">
-          <div className="flex col-span-2">
+          <div className="flex col-span-2 mt-3 lg:mt-2">
             <div>
-              <Image src={logo1} width={50} height={50} className="mx-5" />
+              <Image src={logo1} width={50} className="min-w-6 lg:mx-5 my-auto"/>
             </div>
             <div className="px-2">
               <Image
                 src={logo}
                 width={100}
                 height={100}
-                className=" min-h-10 min-w-32"
+                className=" min-h-10 lg:min-w-32  min-w-20"
               />
             </div>
             <div>
-              <p className="text-sm mt-6 ms-3">ABOUT</p>
+              <p className="lg:text-sm text-xs mt-5 lg:ms-3">ABOUT</p>
             </div>
           </div>
           <div className="flex items-center justify-center col-span-2">
@@ -155,11 +155,11 @@ const HomeSection = () => {
               src={logo2}
               width={100}
               height={100}
-              className=" min-h-10 min-w-40"
+              className=" min-h-10  min-w-20 lg:min-w-40 "
             />
           </div>
-          <div className="flex ml-auto col-span-2">
-            <div className="flex me-8 my-3">
+          <div className="flex ml-auto col-span-2 flex-col lg:flex-row  lg:items-center">
+            <div className="flex lg:me-8 my-3 lg:order-1 ml-auto">
               <div>
                 {mounted && (
                   <p className="text-[0.6rem] text-white tracking-widest text-nowrap uppercase">
@@ -176,12 +176,12 @@ const HomeSection = () => {
                     src={`https://flagcdn.com/${location.countryCode.toLowerCase()}.svg`}
                     width="30"
                     alt={`Flag of ${location.countryCode}`}
-                    className="mx-3 my-1"
+                    className="lg:mx-3 ms-3 my-1"
                   />
                 )}
               </div>
             </div>
-            <div className="flex items-center ml-auto space-x-10">
+            <div className="flex items-center space-x-10 ml-auto lg:order-2">
               <PiBagLight size={20} />
               <LiaUser size={20} />
             </div>
@@ -192,7 +192,7 @@ const HomeSection = () => {
           <p className="text-sm my-1">BACK</p>
         </div>
         <div
-          className="px-5 pt-32 tracking-wider"
+          className="px-5 lg:pt-32 pt-20 tracking-wider"
           data-aos="fade-right "
           data-aos-once="true"
         >
@@ -202,12 +202,8 @@ const HomeSection = () => {
             FOR THOSE WHO WISH FOR MORE...
           </p>
         </div>
-        <div className=" pt-20 ">
-          <p
-            className="text-sm opacity-30 text-center tracking-widest my-1"
-            data-aos="fade-up"
-            data-aos-once="true"
-          >
+        <div className="pt-15 lg:pt-20 ">
+          <p className="text-sm opacity-30 text-center tracking-widest my-1">
             BRING THE WORLD CLOSER TOGETHER
           </p>
           <div className="flex items-center justify-center">
