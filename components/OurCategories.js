@@ -62,12 +62,16 @@ const OurCategories = () => {
                 src={image.src}
                 width={100}
                 height={100}
-                className="min-h-full lg:min-w-64 min-32 md:min-h-48 "
+                className="min-h-10 lg:min-h-fullmin-32 md:min-h-48 min-w-[20vw] "
               />
+              {/* lg:min-w-64 */}
             </div>
             <div class="absolute inset-0 bg-gray-700 opacity-60"></div>
             <div className="absolute inset-0 flex items-end justify-center">
-              <p className="text-white text-xs lg:text-base-50 py-2" data-aos="fade-up">
+              <p
+                className="text-white text-xs lg:text-base-50 !-mt-96 lg:py-2"
+                data-aos="fade-up"
+              >
                 {image.text}
               </p>
             </div>
