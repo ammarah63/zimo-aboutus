@@ -214,7 +214,7 @@ const HomeSection = ({ locationData }) => {
             FOR THOSE WHO WISH FOR MORE...
           </p>
         </div>
-        <div className="pt-[16vh] lg:pt-20 md:pt-20">
+        <div className="pt-[20vh] lg:pt-20 md:pt-20">
           <p className="text-xs lg:text-sm opacity-30 text-center tracking-widest my-1">
             BRING THE WORLD CLOSER TOGETHER
           </p>
