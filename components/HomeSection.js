@@ -10,7 +10,7 @@ import { PiBagLight } from "react-icons/pi";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const HomeSection = ({locationData}) => {
+const HomeSection = ({ locationData }) => {
   function getDate() {
     const today = new Date();
     const months = [
@@ -93,7 +93,7 @@ const HomeSection = ({locationData}) => {
       countryCode: locationData.countryCode,
     });
 
-   // fetchLocation();
+    // fetchLocation();
   }, []);
 
   let myInterval;
@@ -171,7 +171,7 @@ const HomeSection = ({locationData}) => {
             />
           </div>
           <div className="flex ml-auto col-span-2 flex-col lg:flex-row  lg:items-center">
-            <div className="flex mt-1 me-3 lg:me-8 lg:my-3 lg:mt-5 order-2 lg:order-1 ml-auto">
+            <div className="flex order-1 mt-1 -ms-28 me-3 lg:me-8 lg:my-3 lg:mt-5  lg:order-1">
               <div>
                 {mounted && (
                   <p className="text-[0.6rem] text-white tracking-widest text-nowrap uppercase">
@@ -193,7 +193,7 @@ const HomeSection = ({locationData}) => {
                 )}
               </div>
             </div>
-            <div className="mt-5 lg:mt-0 lg:flex me-5 space-y-5 items-center justify-center lg:space-x-10 ml-auto order-2 lg:order-2">
+            <div className="mt-5 lg:mt-0 lg:flex me-5 space-y-5 lg:space-y-0 items-center justify-center lg:space-x-10 ml-auto order-2 lg:order-2">
               <PiBagLight size={20} />
               <LiaUser size={20} />
             </div>
