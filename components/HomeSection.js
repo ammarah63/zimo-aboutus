@@ -171,7 +171,7 @@ const HomeSection = ({locationData}) => {
             />
           </div>
           <div className="flex ml-auto col-span-2 flex-col lg:flex-row  lg:items-center">
-            <div className="flex  lg:me-8 my-3 lg:order-1 ml-auto">
+            <div className="flex  lg:me-8 my-3 mt-5 order-2 lg:order-1 ml-auto">
               <div>
                 {mounted && (
                   <p className="text-[0.6rem] text-white tracking-widest text-nowrap uppercase">
@@ -193,7 +193,7 @@ const HomeSection = ({locationData}) => {
                 )}
               </div>
             </div>
-            <div className="flex items-center space-x-10 ml-auto lg:order-2">
+            <div className="flex items-center space-x-10 ml-auto order-1 lg:order-2">
               <PiBagLight size={20} />
               <LiaUser size={20} />
             </div>
