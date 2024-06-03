@@ -30,8 +30,12 @@ export default function Home({ location }) {
 }
 
 export async function getServerSideProps(context) {
+  const clientIp =
+    context.req.headers["x-forwarded-for"] ||
+    context.req.connection.remoteAddress;
+
   try {
-    const res = await fetch("http://ip-api.com/json");
+    const res = await fetch(`http://ip-api.com/json/${clientIp}`);
     const data = await res.json();
 
     if (!res.ok) {
