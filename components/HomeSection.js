@@ -136,11 +136,11 @@ const HomeSection = ({locationData}) => {
         style={{
           backgroundImage: "url('/images/2023-01-19_22-48-19.svg')",
         }}
-        className="bg-cover bg-center h-screen lg:p-10 p-5 text-white"
+        className=" bg-cover bg-center h-screen lg:p-10  text-white"
       >
         <div className="grid grid-cols-6">
-          <div className="lg:flex md:flex col-span-2 mt-3 lg:mt-2">
-            <div className="flex order-1 lg:order-2 md:order-2">
+          <div className="ml-3 lg:flex md:flex col-span-2 mt-3 lg:mt-2">
+            <div className="flex order-2 lg:order-2 md:order-2">
               <div className="pe-1 lg:px-2">
                 <Image
                   src={logo}
@@ -153,7 +153,7 @@ const HomeSection = ({locationData}) => {
                 <p className="lg:text-sm text-xs mt-2 lg:mt-5 lg:ms-3">ABOUT</p>
               </div>
             </div>
-            <div className="order-2 md:order-1 lg:order-1 mt-3 md:mt-0 lg:mt-0">
+            <div className="order-1 md:order-1 lg:order-1 mt-3 md:mt-0 lg:mt-0">
               <Image
                 src={logo1}
                 width={50}
@@ -167,11 +167,11 @@ const HomeSection = ({locationData}) => {
               src={logo2}
               width={100}
               height={100}
-              className=" min-h-10  min-w-20 lg:min-w-40 "
+              className=" min-h-10  min-w-20 lg:min-w-40 lg:mt-0"
             />
           </div>
           <div className="flex ml-auto col-span-2 flex-col lg:flex-row  lg:items-center">
-            <div className="flex  lg:me-8 my-3 mt-5 order-2 lg:order-1 ml-auto">
+            <div className="flex mt-1 me-3 lg:me-8 lg:my-3 lg:mt-5 order-2 lg:order-1 ml-auto">
               <div>
                 {mounted && (
                   <p className="text-[0.6rem] text-white tracking-widest text-nowrap uppercase">
@@ -193,18 +193,18 @@ const HomeSection = ({locationData}) => {
                 )}
               </div>
             </div>
-            <div className="flex items-center space-x-10 ml-auto order-1 lg:order-2">
+            <div className="mt-5 lg:mt-0 lg:flex me-5 space-y-5 items-center justify-center lg:space-x-10 ml-auto order-2 lg:order-2">
               <PiBagLight size={20} />
               <LiaUser size={20} />
             </div>
           </div>
         </div>
-        <div className="flex py-2 lg:p-5 font-thin">
+        <div className="flex ml-2  py-5 mt-3 lg:p-5 md:p-5 font-thin">
           <PiArrowLeftThin className="m-1 mt-1" size={20} />
           <p className="text-xs lg:text-sm my-1">BACK</p>
         </div>
         <div
-          className="lg:px-5 pt-32 tracking-wider"
+          className="lg:px-5 md:px-5 ml-3 pt-28 lg:pt-32 tracking-wider"
           data-aos="fade-right "
           data-aos-once="true"
         >
@@ -214,7 +214,7 @@ const HomeSection = ({locationData}) => {
             FOR THOSE WHO WISH FOR MORE...
           </p>
         </div>
-        <div className="pt-20 md:pt-32">
+        <div className="pt-28 lg:pt-20 md:pt-20">
           <p className="text-xs lg:text-sm opacity-30 text-center tracking-widest my-1">
             BRING THE WORLD CLOSER TOGETHER
           </p>

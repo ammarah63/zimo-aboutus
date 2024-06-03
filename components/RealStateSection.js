@@ -51,18 +51,18 @@ const RealStateSection = () => {
           </p>
         </div>
         <div
-          className="grid grid-cols-2 gap-1 mt-12 "
+          className="grid grid-cols-2 gap-1 mt-14 lg:mt-12 "
           data-aos="fade-right"
           data-aos-once="true"
         >
           <div>
-            <p className="text-base lg:text-2xl tracking-widest">
+            <p className="text-xs lg:text-2xl tracking-widest">
               A REVOLUTIONARY PLATFORM
             </p>
-            <p className="text-lg lg:text-4xl mt-2 tracking-widest">
+            <p className="text-base lg:text-4xl mt-2 tracking-widest">
               ENTRIES - SELLERS
             </p>
-            <p className="text-xl  lg:text-5xl mt-2 tracking-widest">
+            <p className="text-lg  lg:text-5xl mt-2 tracking-widest">
               WORLDWIDE
             </p>
           </div>
@@ -76,21 +76,21 @@ const RealStateSection = () => {
                 src={logo}
                 width={100}
                 height={100}
-                className="min-w-64 lg:min-h-20 lg:min-w-96"
+                className="min-w-52 lg:min-h-20 lg:min-w-96"
               />
             </div>
-            <p className="text-center text:xs lg:text-sm tracking-widest mt-7">
+            <p className="text-center text-xs lg:text-sm tracking-widest mt-7">
               CONNECTING USERS FROM ACROSS THE GLOBE
             </p>
-            <p className="text-center  text:xs lg:text-sm tracking-widest">
+            <p className="text-center  text-xs lg:text-sm tracking-widest">
               TO FACILITATE LIFE&apos;S MOST IMPORTANT
             </p>
-            <p className="text-center  text:xs lg:text-sm tracking-widest">
+            <p className="text-center  text-xs lg:text-sm tracking-widest">
               PERSONAL TRANSACTIONS
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-1 -mt-10">
+        <div className="grid grid-cols-2 gap-1 lg:-mt-10">
           <div
             data-aos="fade-right"
             data-aos-once="true"
@@ -99,7 +99,7 @@ const RealStateSection = () => {
             <p className="text-base lg:text-3xl tracking-widest">
               THE BEST OF THE BEST
             </p>
-            <p className="tracking-widest text-xs lg:text-sm mt-7">
+            <p className="tracking-widest text-xs lg:text-sm mt-4 lg:mt-7">
               A COMBINATION OF AUTOMATION AND MANUAL CURATION OUR PRO AGENTS AND
               MODERATION TEAM SELECTS THE HIGHEST QUALITY LISTINGS ON THE MARKET
               FROM ACROSS THE WORLD.

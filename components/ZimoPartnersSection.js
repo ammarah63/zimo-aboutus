@@ -6,7 +6,7 @@ import pic2 from "../public/images/Group 4766.svg";
 const ZimoPartnersDection = () => {
   return (
     <>
-      <div className="bg-cover bg-center bg-white h-screen text-black text-center">
+      <div className="bg-cover bg-center bg-white h-screen border-t-2 border-bordergrey border-opacity-20 text-black text-center">
         <div className="grid grid-cols-3 gap-1 h-screen">
           <div className="flex justify-center">
             <Image

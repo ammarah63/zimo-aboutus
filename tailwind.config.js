@@ -10,6 +10,7 @@ module.exports = {
     colors: {
       white: "#ffffff",
       Date: "#BE9F56",
+      bordergrey: "#707070",
     },
     extend: {
       backgroundImage: {
@@ -17,7 +18,11 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-    
+      backdropBrightness: {
+        25: ".25",
+        35: ".35",
+        175: "1.75",
+      },
     },
   },
   plugins: [],

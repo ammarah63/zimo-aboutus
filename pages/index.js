@@ -8,6 +8,7 @@ import {
   GlobalSection,
   ZimoPartnersSection,
   LastSection,
+  OneSourceSectionmy
 } from "../components";
 
 export default function Home({ location }) {
@@ -21,6 +22,7 @@ export default function Home({ location }) {
       <RealStateSection />
       <OurCategories />
       <OneSourceSection />
+      <OneSourceSectionmy />
       <AlertSection />
       <GlobalSection />
       <ZimoPartnersSection />

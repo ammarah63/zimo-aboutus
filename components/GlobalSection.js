@@ -8,7 +8,7 @@ const GlobalSection = () => {
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
         }}
-        className="bg-cover bg-center h-screen px-5 lg:p-10 text-black text-center flex justify-center items-center"
+        className="bg-cover bg-center  h-screen px-5 lg:p-10 text-black text-center flex justify-center items-center"
       >
         <div>
           <p
