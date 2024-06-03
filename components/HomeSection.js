@@ -10,7 +10,7 @@ import { PiBagLight } from "react-icons/pi";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const HomeSection = () => {
+const HomeSection = ({locationData}) => {
   function getDate() {
     const today = new Date();
     const months = [
@@ -77,18 +77,23 @@ const HomeSection = () => {
   }, []);
 
   useEffect(() => {
-    const fetchLocation = async () => {
-      const response = await fetch("http://ip-api.com/json");
-      const data = await response.json();
-      console.log(data.countryCode);
-      setLocation({
-        city: data.city,
-        country: data.country,
-        countryCode: data.countryCode,
-      });
-    };
+    // const fetchLocation = async () => {
+    //   const response = await fetch("http://ip-api.com/json");
+    //   const data = await response.json();
+    //   console.log(data.countryCode);
+    //   setLocation({
+    //     city: data.city,
+    //     country: data.country,
+    //     countryCode: data.countryCode,
+    //   });
+    // };
+    setLocation({
+      city: locationData.city,
+      country: locationData.country,
+      countryCode: locationData.countryCode,
+    });
 
-    fetchLocation();
+   // fetchLocation();
   }, []);
 
   let myInterval;
