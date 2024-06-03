@@ -11,10 +11,10 @@ import {
 } from "../components";
 
 export default function Home({ location }) {
-  useEffect(() => {
-    console.log("location api", location);
-  }),
-    [location];
+ useEffect(() => {
+   console.log("location api", location);
+ }, [location]);
+
   return (
     <>
       <HomeSection locationData={location} />
@@ -41,11 +41,12 @@ export async function getServerSideProps(context) {
     if (!res.ok) {
       throw new Error(`Error: ${res.status}`);
     }
+    console.log(data);
 
     const location = {
-      city: data.city,
-      country: data.country,
-      countryCode: data.countryCode,
+      city: data.city || null,
+      country: data.country || null,
+      countryCode: data.countryCode || null,
     };
 
     return {

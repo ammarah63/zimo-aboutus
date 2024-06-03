@@ -139,22 +139,29 @@ const HomeSection = ({locationData}) => {
         className="bg-cover bg-center h-screen lg:p-10 p-5 text-white"
       >
         <div className="grid grid-cols-6">
-          <div className="flex col-span-2 mt-3 lg:mt-2">
-            <div>
-              <Image src={logo1} width={50} className="min-w-6 lg:mx-5 my-auto"/>
+          <div className="lg:flex md:flex col-span-2 mt-3 lg:mt-2">
+            <div className="flex order-1 lg:order-2 md:order-2">
+              <div className="pe-1 lg:px-2">
+                <Image
+                  src={logo}
+                  width={100}
+                  height={100}
+                  className="max-w-20 lg:min-w-32"
+                />
+              </div>
+              <div>
+                <p className="lg:text-sm text-xs mt-2 lg:mt-5 lg:ms-3">ABOUT</p>
+              </div>
             </div>
-            <div className="px-2">
+            <div className="order-2 md:order-1 lg:order-1 mt-3 md:mt-0 lg:mt-0">
               <Image
-                src={logo}
-                width={100}
-                height={100}
-                className=" min-h-10 lg:min-w-32  min-w-20"
+                src={logo1}
+                width={50}
+                className="max-w-8 lg:min-w-14 lg:mx-5 my-auto md:mx-2"
               />
             </div>
-            <div>
-              <p className="lg:text-sm text-xs mt-5 lg:ms-3">ABOUT</p>
-            </div>
           </div>
+
           <div className="flex items-center justify-center col-span-2">
             <Image
               src={logo2}
@@ -164,7 +171,7 @@ const HomeSection = ({locationData}) => {
             />
           </div>
           <div className="flex ml-auto col-span-2 flex-col lg:flex-row  lg:items-center">
-            <div className="flex lg:me-8 my-3 lg:order-1 ml-auto">
+            <div className="flex  lg:me-8 my-3 lg:order-1 ml-auto">
               <div>
                 {mounted && (
                   <p className="text-[0.6rem] text-white tracking-widest text-nowrap uppercase">
@@ -192,29 +199,28 @@ const HomeSection = ({locationData}) => {
             </div>
           </div>
         </div>
-        <div className="flex p-5 font-thin">
-          <PiArrowLeftThin className="m-1 mt-1" size={20} />{" "}
-          <p className="text-sm my-1">BACK</p>
+        <div className="flex py-2 lg:p-5 font-thin">
+          <PiArrowLeftThin className="m-1 mt-1" size={20} />
+          <p className="text-xs lg:text-sm my-1">BACK</p>
         </div>
         <div
-          className="px-5 lg:pt-32 pt-20 tracking-wider"
+          className="lg:px-5 pt-32 tracking-wider"
           data-aos="fade-right "
           data-aos-once="true"
         >
-          <p className="text-3xl my-3 ">DISCOVER</p>
-          <p className="text-4xl ">A NEW WORLD</p>
-          <p className="text-sm my-5 opacity-30 ">
+          <p className="text-lg lg:text-3xl my-3 ">DISCOVER</p>
+          <p className="text-xl lg:text-4xl ">A NEW WORLD</p>
+          <p className="text-xs lg:text-sm my-5 opacity-30 ">
             FOR THOSE WHO WISH FOR MORE...
           </p>
         </div>
-        <div className="pt-15 lg:pt-20 ">
-          <p className="text-sm opacity-30 text-center tracking-widest my-1">
+        <div className="pt-20 md:pt-32">
+          <p className="text-xs lg:text-sm opacity-30 text-center tracking-widest my-1">
             BRING THE WORLD CLOSER TOGETHER
           </p>
           <div className="flex items-center justify-center">
             <PiCaretDownThin
-              size={75}
-              className=" animate-bounce hover:animate-ping"
+              className=" animate-bounce hover:animate-ping h-20 w-20 lg:h-24"
               onClick={handleScroll}
             />
           </div>
