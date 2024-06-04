@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { PiCaretLeftThin, PiCaretRightThin } from "react-icons/pi";
+import { useMediaQuery } from "react-responsive";
 import pic0 from "../public/images/Rectangle 9440.svg";
 import pic01 from "../public/images/Rectangle 94401.svg";
 import pic1 from "../public/images/Rectangle 9442.svg";
@@ -21,24 +22,31 @@ const OurCategories = () => {
     { src: pic5, text: "JETS" },
     { src: pic6, text: "TRAVEL THE WORLD" },
   ];
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const isLargeScreen = useMediaQuery({ query: "(min-width: 1024px)" });
+  const isMediumScreen = useMediaQuery({ query: "(min-width: 768px)" });
+
+  const itemsToShow = isLargeScreen ? 4 : isMediumScreen ? 3 : 2;
+  const [startIndex, setStartIndex] = useState(0);
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 4 : prevIndex - 1
-    );
+    if (startIndex > 0) {
+      setStartIndex(startIndex - 1);
+    }
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 4 ? 0 : prevIndex + 1
-    );
+    if (startIndex < images.length - itemsToShow) {
+      setStartIndex(startIndex + 1);
+    }
   };
 
   return (
-    <div id="OurCategoriesSection" className="bg-white bg-center h-screen p-10 flex justify-center items-center">
+    <div
+      id="OurCategoriesSection"
+      className="bg-white bg-center h-screen p-5 flex justify-center items-center"
+    >
       <div>
-        <div className="flex">
+        <div className="flex mb-[6vh] mt-[0vh]">
           <p
             className="text-2xl tracking-widest my-1"
             data-aos="fade-right"
@@ -47,30 +55,46 @@ const OurCategories = () => {
             OUR CATEGORIES
           </p>
           <div className="flex ml-auto">
-            <button onClick={handlePrev}>
-              <PiCaretLeftThin size={40} className="me-5" />
+            <button onClick={handlePrev} disabled={startIndex === 0}>
+              <PiCaretLeftThin
+                size={40}
+                className={`me-5 ${startIndex === 0 ? "opacity-50" : ""}`}
+              />
             </button>
-            <button onClick={handleNext}>
-              <PiCaretRightThin size={40} />
+            <button
+              onClick={handleNext}
+              disabled={startIndex >= images.length - itemsToShow}
+            >
+              <PiCaretRightThin
+                size={40}
+                className={`${
+                  startIndex >= images.length - itemsToShow ? "opacity-50" : ""
+                }`}
+              />
             </button>
           </div>
         </div>
-        <div className="grid grid-cols-4 gap-2 lg:gap-4 mt-12">
-          {images.slice(currentIndex, currentIndex + 4).map((image, index) => (
-            <div key={index} className="relative">
-              <div className="flex items-end justify-center relative">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-4">
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className={`rounded-lg relative transition-transform duration-300 ${
+                index >= startIndex && index < startIndex + itemsToShow
+                  ? ""
+                  : "hidden"
+              }`}
+            >
+              <div className="rounded-lg flex items-end justify-center relative">
                 <Image
                   src={image.src}
                   width={100}
                   height={100}
-                  className="min-h-10 lg:min-h-fullmin-32 md:min-h-48 min-w-[20vw] "
+                  className="!rounded-lg  md:min-w-[28vw] min-w-[40vw] lg:min-w-[22vw]"
                 />
-                {/* lg:min-w-64 */}
               </div>
-              <div class="absolute inset-0 bg-gray-700 opacity-60"></div>
-              <div className="absolute inset-0 flex items-end justify-center">
+              <div className="absolute rounded-lg inset-0 backdrop-brightness-50 flex items-end justify-center">
                 <p
-                  className="text-white text-xs lg:text-base-50 !-mt-96 lg:py-2"
+                  className="text-white tracking-widest py-3 text-xs lg:text-base !-mt-96 lg:py-5"
                   data-aos="fade-up"
                 >
                   {image.text}
@@ -79,9 +103,9 @@ const OurCategories = () => {
             </div>
           ))}
         </div>
-        <div className="mt-7 lg:mt-14">
+        <div className="">
           <p
-            className="text-center lg:text-3xl text:lg tracking-widest"
+            className="text-center my-[4vh] lg:my-[8vh] lg:text-3xl md:text-2xl text-lg tracking-widest"
             data-aos="fade-up"
             data-aos-once="true"
           >
@@ -90,7 +114,7 @@ const OurCategories = () => {
         </div>
         <div>
           <p
-            className="text-center lg:text-2xl text-base  mt-7 lg:mt-14 tracking-widest"
+            className="text-center lg:text-2xl md:text-xl text-base tracking-widest"
             data-aos="fade-up"
             data-aos-once="true"
           >

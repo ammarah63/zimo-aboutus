@@ -21,7 +21,7 @@ export default function Home({ location }) {
       <HomeSection locationData={location} />
       <RealStateSection />
       <OurCategories />
-      <OneSourceSection />
+      {/* <OneSourceSection /> */}
       <OneSourceSectionmy />
       <AlertSection />
       <GlobalSection />

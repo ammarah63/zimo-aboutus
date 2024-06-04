@@ -43,14 +43,14 @@ const RealStateSection = () => {
       <div className="bg-white bg-center h-screen py-5 px-5 lg:px-10 ">
         <div id="realStateSection">
           <p
-            className="text-center  text-xs lg:text-sm tracking-widest"
+            className="text-center mt-6 text-xs lg:text-sm tracking-widest"
             data-aos="fade-up"
             data-aos-once="true"
           >
             A REAL STATE AND PROPERTY PLATFORM THAT IS CHANGING THE WORLD
           </p>
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center h-4/5">
           <div>
             <div
               className=" grid grid-cols-2 gap-1 mt-14 lg:mt-12 "
