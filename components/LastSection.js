@@ -9,7 +9,7 @@ const LastSection = () => {
         style={{
           backgroundImage: "url('/images/Path 27324.svg')",
         }}
-        className="bg-cover bg-center h-2/4 lg:h-screen pt-[35vh] lg:pt-[60vh] text-white"
+        className="bg-cover bg-center h-2/4 lg:h-screen pt-[40vh] lg:pt-[60vh] text-white"
       >
         <div className="grid grid-cols-3 gap-1">
           <div className="flex justify-center">
