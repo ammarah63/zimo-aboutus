@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { PiCaretLeftThin, PiCaretRightThin } from "react-icons/pi";
 import { useMediaQuery } from "react-responsive";
@@ -22,12 +22,9 @@ const OurCategories = () => {
     { src: pic5, text: "JETS" },
     { src: pic6, text: "TRAVEL THE WORLD" },
   ];
-  const isLargeScreen = useMediaQuery({ query: "(min-width: 1024px)" });
-  const isMediumScreen = useMediaQuery({ query: "(min-width: 768px)" });
 
-  const itemsToShow = isLargeScreen ? 4 : isMediumScreen ? 3 : 2;
   const [startIndex, setStartIndex] = useState(0);
-
+  const [itemsToShow, setItemsToShow] = useState(0);
   const handlePrev = () => {
     if (startIndex > 0) {
       setStartIndex(startIndex - 1);
@@ -39,6 +36,13 @@ const OurCategories = () => {
       setStartIndex(startIndex + 1);
     }
   };
+    const isLargeScreen = useMediaQuery({ query: "(min-width: 1024px)" });
+    const isMediumScreen = useMediaQuery({ query: "(min-width: 768px)" });
+
+  useEffect(() => {
+    const itemsToShow1 = isLargeScreen ? 4 : isMediumScreen ? 3 : 2;
+    setItemsToShow(itemsToShow1);
+  });
 
   return (
     <div
@@ -89,7 +93,7 @@ const OurCategories = () => {
                   src={image.src}
                   width={100}
                   height={100}
-                  className="!rounded-lg  md:min-w-[28vw] min-w-[40vw] lg:min-w-[22vw]"
+                  className="!rounded-lg  md:min-w-[28vw] min-w-[44vw] lg:min-w-[22vw]"
                 />
               </div>
               <div className="absolute rounded-lg inset-0 backdrop-brightness-50 flex items-end justify-center">

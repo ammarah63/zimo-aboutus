@@ -18,7 +18,7 @@ const LastSection = () => {
               src={pic2}
               width={100}
               height={100}
-              className="min-h-36 min-w-[27vw] lg:min-w-[25vw] lg:mt-50"
+              className="min-h-36 min-w-[30vw] lg:min-w-[25vw] lg:mt-50"
               data-aos="fade-left"
               data-aos-once="true"
             />
