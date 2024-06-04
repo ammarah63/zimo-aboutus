@@ -174,11 +174,11 @@ const HomeSection = ({ locationData }) => {
             <div className="flex order-1 mt-1 -ms-28 me-3 lg:me-8 lg:my-3 lg:mt-5  lg:order-1">
               <div>
                 {mounted && (
-                  <p className="text-[0.6rem] text-white tracking-widest text-nowrap uppercase">
+                  <p className="text-[0.6rem] xl:text-sm text-white tracking-widest text-nowrap uppercase">
                     {currentTime} {location.city}, {location.country}
                   </p>
                 )}
-                <p className="text-[0.6rem] text-Date text-right tracking-widest text-nowrap uppercase">
+                <p className="text-[0.6rem] xl:text-sm text-Date text-right tracking-widest text-nowrap uppercase">
                   {currentDate}
                 </p>
               </div>
@@ -194,28 +194,28 @@ const HomeSection = ({ locationData }) => {
               </div>
             </div>
             <div className="mt-5 lg:mt-0 lg:flex me-5 space-y-5 lg:space-y-0 items-center justify-center lg:space-x-10 ml-auto order-2 lg:order-2">
-              <PiBagLight size={20} />
-              <LiaUser size={20} />
+              <PiBagLight size={20} className="xl:w-10 xl:h-10" />
+              <LiaUser size={20} className="xl:w-10 xl:h-10" />
             </div>
           </div>
         </div>
         <div className="flex ml-2  py-5 mt-3 lg:p-5 md:p-5 font-thin">
-          <PiArrowLeftThin className="m-1 mt-1" size={20} />
-          <p className="text-xs lg:text-sm my-1">BACK</p>
+          <PiArrowLeftThin className="m-1 mt-1 xl:w-8 xl:h-8" size={20} />
+          <p className="text-xs lg:text-sm xl:text-xl my-1">BACK</p>
         </div>
         <div
           className="lg:px-5 md:px-5 ml-3 pt-[18vh] lg:pt-[20] tracking-wider"
           data-aos="fade-right "
           data-aos-once="true"
         >
-          <p className="text-lg lg:text-3xl my-3 ">DISCOVER</p>
-          <p className="text-xl lg:text-4xl ">A NEW WORLD</p>
-          <p className="text-xs lg:text-sm my-5 opacity-30 ">
+          <p className="text-lg lg:text-3xl xl:text-4xl my-3 ">DISCOVER</p>
+          <p className="text-xl lg:text-4xl xl:text-5xl">A NEW WORLD</p>
+          <p className="text-xs lg:text-sm xl:text-base my-5 opacity-30 ">
             FOR THOSE WHO WISH FOR MORE...
           </p>
         </div>
-        <div className="pt-[23vh] lg:pt-20 md:pt-20">
-          <p className="text-xs lg:text-sm opacity-30 text-center tracking-widest my-1">
+        <div className="pt-[23vh] lg:pt-20 xl:pt-[35vh] md:pt-20">
+          <p className="text-xs lg:text-sm xl:text-base opacity-30 text-center tracking-widest my-1">
             BRING THE WORLD CLOSER TOGETHER
           </p>
           <div className="flex items-center justify-center">

@@ -9,8 +9,10 @@ module.exports = {
   theme: {
     colors: {
       white: "#ffffff",
+      black: "#000000",
       Date: "#BE9F56",
       bordergrey: "#707070",
+      gray: "#e5e7eb",
     },
     extend: {
       backgroundImage: {
@@ -22,6 +24,9 @@ module.exports = {
         25: ".25",
         35: ".35",
         175: "1.75",
+      },
+      borderWidth: {
+        1: "1px",
       },
     },
   },

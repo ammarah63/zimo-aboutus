@@ -7,5 +7,6 @@ import AlertSection from "./AlertSection";
 import GlobalSection from "./GlobalSection";
 import ZimoPartnersSection from "./ZimoPartnersSection";
 import LastSection from "./LastSection"
+import MultiStepform from "./MultiStepform";
 
-export { HomeSection, OneSourceSection,OneSourceSectionmy, ZimoPartnersSection, LastSection, OurCategories, RealStateSection, AlertSection, GlobalSection };
+export { HomeSection, MultiStepform, OneSourceSection,OneSourceSectionmy, ZimoPartnersSection, LastSection, OurCategories, RealStateSection, AlertSection, GlobalSection };

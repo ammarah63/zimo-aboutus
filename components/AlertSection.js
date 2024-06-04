@@ -16,18 +16,18 @@ const AlertSection = () => {
         className=" bg-cover bg-center  h-screen  text-white"
       >
         <div className="h-screen backdrop-brightness-35 p-2 lg:p-10 pt-20">
-          <div className="grid grid-cols-2  gap-1 px-0 lg:px-10 mt-5 overflow-x-hidden">
+          <div className="grid grid-cols-2 xl:mt-20 gap-1 px-0 lg:px-10 mt-5 overflow-x-hidden">
             <div></div>
             <div
               className="ml-auto me-0 pe-0"
               data-aos="fade-left"
               data-aos-once="true"
             >
-              <p className="text-base lg:text-2xl tracking-widest">
+              <p className="text-base lg:text-2xl xl:text-5xl tracking-widest">
                 PERSONALISED FOR YOU
               </p>
               <div className="w-[40vw] lg:w-[30vw]">
-                <p className="text-xs lg:text-sm tracking-widest mt-7 opacity-45 ">
+                <p className="text-xs lg:text-sm xl:text-2xl tracking-widest mt-7 opacity-45 ">
                   DELIVERING THOUSANDS OF PERSONALISED ALERTS EVERYDAY, OUR
                   USERS CAN BE FIRST IN LINE WHEN THAT OPPORTUNITY OF A LIFETIME
                   IS HERE
@@ -49,14 +49,14 @@ const AlertSection = () => {
             <div className="ml-auto">
               <div className="flex">
                 <p
-                  className="text-xs lg:text-sm tracking-widest mt-24 text-justify"
+                  className="text-xs lg:text-sm xl:text-xl tracking-widest mt-24 text-justify"
                   data-aos="fade-up"
                   data-aos-once="true"
                 >
                   CREATE USER ID
                 </p>
                 <PiArrowRightThin
-                  className="m-1 mt-24"
+                  className="m-1 mt-24 xl:h-8 xl:w-8"
                   color="white"
                   size={20}
                 />

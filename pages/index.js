@@ -8,7 +8,8 @@ import {
   GlobalSection,
   ZimoPartnersSection,
   LastSection,
-  OneSourceSectionmy
+  OneSourceSectionmy,
+  MultiStepform
 } from "../components";
 
 export default function Home({ location }) {
@@ -24,6 +25,7 @@ export default function Home({ location }) {
       {/* <OneSourceSection /> */}
       <OneSourceSectionmy />
       <AlertSection />
+      <MultiStepform/>
       <GlobalSection />
       <ZimoPartnersSection />
       <LastSection />
