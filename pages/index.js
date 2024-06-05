@@ -25,7 +25,7 @@ export default function Home({ location }) {
       {/* <OneSourceSection /> */}
       <OneSourceSectionmy />
       <AlertSection />
-      <MultiStepform/>
+      {/* <MultiStepform/> */}
       <GlobalSection />
       <ZimoPartnersSection />
       <LastSection />

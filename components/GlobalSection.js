@@ -12,7 +12,7 @@ const GlobalSection = () => {
       >
         <div>
           <p
-            className="text-lg lg:text-2xl xl:text-5xl tracking-widest"
+            className="text-lg lg:text-2xl 2xl:text-5xl tracking-widest"
             data-aos="fade-up"
             data-aos-once="true"
           >
@@ -20,14 +20,14 @@ const GlobalSection = () => {
           </p>
 
           <p
-            className="text-xs lg:text-sm xl:text-xl tracking-widest mt-7 text-center"
+            className="text-xs lg:text-sm 2xl:text-xl tracking-widest mt-7 text-center"
             data-aos="fade-up"
             data-aos-once="true"
           >
             WITH A REMOTE CULTURE, DIVERSITY IS NATURALLY IN OUR DNA.
           </p>
           <p
-            className="text-xs lg:text-sm xl:text-xl tracking-widest mt-2 text-center"
+            className="text-xs lg:text-sm 2xl:text-xl tracking-widest mt-2 text-center"
             data-aos="fade-up"
             data-aos-once="true"
           >

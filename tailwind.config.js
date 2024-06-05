@@ -13,6 +13,7 @@ module.exports = {
       Date: "#BE9F56",
       bordergrey: "#707070",
       gray: "#e5e7eb",
+      inputgrey:"#aeb2b9",
     },
     extend: {
       backgroundImage: {

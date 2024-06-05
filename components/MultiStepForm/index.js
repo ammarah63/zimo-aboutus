@@ -1,14 +1,26 @@
 import Image from "next/image";
-import logo from "../public/images/Group 4758.svg";
+import logo from "../../public/images/Group 4758.svg";
 import { useState } from "react";
 import { PiCaretDownThin } from "react-icons/pi";
 import { PiArrowLeftThin } from "react-icons/pi";
+import Form from "./Form";
 
 const MultiStepform = () => {
-  const [apply , setApply]=useState(false);
+  const [apply, setApply] = useState(false);
+
+  // Function to handle applying
+  const handleApply = () => {
+    setApply(true);
+  };
+
+  // Function to handle closing modal
+  const handleCloseModal = () => {
+    setApply(false);
+  };
+
   return (
-    <>
-      <div className="h-screen">
+    <div className="h-screen relative">
+      <div className="relative h-screen">
         <div
           onClick={() => setApply(false)}
           className="flex ml-5 mt-5 font-thin"
@@ -48,7 +60,10 @@ const MultiStepform = () => {
           </div>
 
           {apply ? (
-            <button className="w-32 h-32 rounded-lg bg-black text-white translate-y-20 -translate-x-16">
+            <button
+              onClick={handleApply}
+              className="w-32 h-32 rounded-lg bg-black text-white translate-y-20 -translate-x-16"
+            >
               APPLY
             </button>
           ) : (
@@ -60,6 +75,7 @@ const MultiStepform = () => {
             </button>
           )}
         </div>
+
         <style jsx>{`
           .custom-select {
             appearance: none;
@@ -72,7 +88,11 @@ const MultiStepform = () => {
           }
         `}</style>
       </div>
-    </>
+      <div className="absolute top-0 w-full  mb-96">
+        {" "}
+        {apply && <Form onClose={handleCloseModal} />}
+      </div>
+    </div>
   );
 };
 
