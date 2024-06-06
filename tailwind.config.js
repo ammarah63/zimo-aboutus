@@ -13,9 +13,12 @@ module.exports = {
       Date: "#BE9F56",
       bordergrey: "#707070",
       gray: "#e5e7eb",
-      inputgrey:"#aeb2b9",
+      inputgrey: "#aeb2b9",
     },
     extend: {
+      screens: {
+        "3xl": "1920px",
+      },
       backgroundImage: {
         "home-section": "url('/public/images/2023-01-19_22-48-19.png')",
         "gradient-conic":
@@ -33,3 +36,4 @@ module.exports = {
   },
   plugins: [],
 };
+

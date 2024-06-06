@@ -24,13 +24,13 @@ const OneSourceSection = () => {
                 data-aos="fade-up"
                 data-aos-once="true"
               >
-                <p className="text-lg mt-5 2xl:text-4xl lg:text-2xl text-center lg:text-left md:text-left tracking-widest">
+                <p className="text-lg mt-5 3xl:text-4xl lg:text-2xl text-center lg:text-left md:text-left tracking-widest">
                   OUR SOURCE
                 </p>
-                <p className="text-2xl lg:text-4xl 2xl:text-6xl text-center lg:text-left md:text-left tracking-widest lg:mt-3">
+                <p className="text-2xl lg:text-4xl 3xl:text-6xl text-center lg:text-left md:text-left tracking-widest lg:mt-3">
                   ENTRY TICKETS
                 </p>
-                <p className="text-nowrap text-xs text-center 2xl:text-2xl lg:text-left md:text-left lg:text-sm tracking-widest lg:mt-5 opacity-45">
+                <p className="text-nowrap text-xs text-center 3xl:text-2xl lg:text-left md:text-left lg:text-sm tracking-widest lg:mt-5 opacity-45">
                   FOR ALL PREMIUM LISTINGS
                 </p>
               </div>
@@ -48,7 +48,7 @@ const OneSourceSection = () => {
               />
             </div>
             <p
-              className="text-sm lg:text-base 2xl:text-2xl tracking-widest mt-3 lg:mt-10 text-center"
+              className="text-sm lg:text-base 3xl:text-2xl tracking-widest mt-3 lg:mt-10 text-center"
               data-aos="fade-up"
               data-aos-once="true"
             >

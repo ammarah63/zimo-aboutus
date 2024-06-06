@@ -43,28 +43,28 @@ const RealStateSection = () => {
       <div className="bg-white bg-center h-screen py-5 px-5 lg:px-10 ">
         <div id="realStateSection">
           <p
-            className="text-center mt-6 text-xs lg:text-sm 2xl:text-lg tracking-widest"
+            className="text-center mt-6 text-xs lg:text-sm 3xl:text-lg tracking-widest"
             data-aos="fade-up"
             data-aos-once="true"
           >
             A REAL STATE AND PROPERTY PLATFORM THAT IS CHANGING THE WORLD
           </p>
         </div>
-        <div className="flex justify-center items-center h-4/5">
+        <div className="flex justify-center items-center ">
           <div>
             <div
-              className=" grid grid-cols-2 gap-1 mt-14 lg:mt-12 "
+              className=" grid grid-cols-2 gap-1 mt-14 lg:mt-12 3xl:mt-20"
               data-aos="fade-right"
               data-aos-once="true"
             >
               <div>
-                <p className="text-xs lg:text-2xl 2xl:text-4xl tracking-widest">
+                <p className="text-xs lg:text-2xl 3xl:text-4xl tracking-widest 2xl:tracking-[0.11em]">
                   A REVOLUTIONARY PLATFORM
                 </p>
-                <p className="text-base lg:text-4xl 2xl:text-6xl mt-2 tracking-widest">
+                <p className="text-base lg:text-4xl 3xl:text-6xl mt-2 2xl:tracking-[0.17em] 3xl:tracking-widest">
                   ENTRIES - SELLERS
                 </p>
-                <p className="text-lg  lg:text-5xl 2xl:text-7xl mt-2 tracking-widest">
+                <p className="text-lg   lg:text-5xl 3xl:text-7xl mt-2 2xl:tracking-[0.27em] 3xl:tracking-[0.27em]">
                   WORLDWIDE
                 </p>
               </div>
@@ -82,30 +82,30 @@ const RealStateSection = () => {
                     src={logo}
                     width={100}
                     height={100}
-                    className="min-w-52 lg:min-h-20 lg:min-w-96"
+                    className="min-w-52 lg:min-h-20 lg:min-w-96 3xl:min-w-[28vw]"
                   />
                 </div>
-                <p className="text-center text-xs lg:text-sm 2xl:text-lg tracking-widest mt-7">
+                <p className="text-center text-xs lg:text-sm 3xl:text-lg tracking-widest mt-7">
                   CONNECTING USERS FROM ACROSS THE GLOBE
                 </p>
-                <p className="text-center  text-xs lg:text-sm 2xl:text-lg tracking-widest">
+                <p className="text-center  text-xs lg:text-sm 3xl:text-lg tracking-widest">
                   TO FACILITATE LIFE&apos;S MOST IMPORTANT
                 </p>
-                <p className="text-center  text-xs lg:text-sm 2xl:text-lg tracking-widest">
+                <p className="text-center  text-xs lg:text-sm 3xl:text-lg tracking-widest">
                   PERSONAL TRANSACTIONS
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-1 lg:-mt-10 2xl:mt-10">
+            <div className="grid grid-cols-2 gap-1 lg:-mt-10 2xl:mt-10 3xl:mt-10">
               <div
                 data-aos="fade-right"
                 data-aos-once="true"
                 className="overflow-hidden"
               >
-                <p className="text-base lg:text-3xl 2xl:text-5xl tracking-widest">
+                <p className="text-base lg:text-3xl 3xl:text-5xl tracking-widest">
                   THE BEST OF THE BEST
                 </p>
-                <p className="tracking-widest text-xs lg:text-sm 2xl:text-lg mt-4 lg:mt-7">
+                <p className="tracking-widest text-xs lg:text-sm  2xl:text-lg 2xl:tracking-[0.17em] 3xl:text-lg 3xl:tracking-[0.2em] mt-4 lg:mt-7">
                   A COMBINATION OF AUTOMATION AND MANUAL CURATION OUR PRO AGENTS
                   AND MODERATION TEAM SELECTS THE HIGHEST QUALITY LISTINGS ON
                   THE MARKET FROM ACROSS THE WORLD.
@@ -116,7 +116,7 @@ const RealStateSection = () => {
           </div>
         </div>
         <div>
-          <div className="flex items-center justify-center mt-7">
+          <div className="flex items-center justify-center mt-32">
             <PiCaretDownThin
               size={75}
               className=" animate-bounce hover:animate-ping"

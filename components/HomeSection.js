@@ -48,11 +48,9 @@ const HomeSection = ({ locationData }) => {
     const hours = now.getHours();
     const minutes = now.getMinutes();
     const seconds = now.getSeconds();
-    return `${hours}:${minutes < 10 ? `0${minutes}` : minutes}:${
-      seconds < 10 ? `0${seconds}` : seconds
-    }`;
+    return `${hours}:${minutes < 10 ? `0${minutes}` : minutes}`;
   }
-
+  //:${seconds < 10 ? `0${seconds}` : seconds}
   const [currentDate, setCurrentDate] = useState(getDate());
   const [currentTime, setCurrentTime] = useState(getTime());
   const [location, setLocation] = useState({
@@ -77,23 +75,11 @@ const HomeSection = ({ locationData }) => {
   }, []);
 
   useEffect(() => {
-    // const fetchLocation = async () => {
-    //   const response = await fetch("http://ip-api.com/json");
-    //   const data = await response.json();
-    //   console.log(data.countryCode);
-    //   setLocation({
-    //     city: data.city,
-    //     country: data.country,
-    //     countryCode: data.countryCode,
-    //   });
-    // };
     setLocation({
       city: locationData.city,
       country: locationData.country,
       countryCode: locationData.countryCode,
     });
-
-    // fetchLocation();
   }, []);
 
   let myInterval;
@@ -136,7 +122,7 @@ const HomeSection = ({ locationData }) => {
         style={{
           backgroundImage: "url('/images/2023-01-19_22-48-19.svg')",
         }}
-        className=" bg-cover bg-center h-screen lg:p-10  text-white"
+        className=" bg-cover bg-center h-screen lg:p-10 2xl:p-7 text-white"
       >
         <div className="grid grid-cols-6">
           <div className="ml-3 lg:flex md:flex col-span-2 mt-3 lg:mt-2">
@@ -174,15 +160,15 @@ const HomeSection = ({ locationData }) => {
             <div className="flex order-1 mt-1 -ms-28 me-3 lg:me-8 lg:my-3 lg:mt-5  lg:order-1">
               <div>
                 {mounted && (
-                  <p className="text-[0.6rem] 2xl:text-sm text-white tracking-widest text-nowrap uppercase">
+                  <p className="text-[0.6rem] 3xl:text-sm text-white tracking-widest text-nowrap uppercase">
                     {currentTime} {location.city}, {location.country}
                   </p>
                 )}
-                <p className="text-[0.6rem] 2xl:text-sm text-Date text-right tracking-widest text-nowrap uppercase">
+                <p className="text-[0.6rem] 3xl:text-sm text-Date text-right tracking-widest text-nowrap uppercase">
                   {currentDate}
                 </p>
               </div>
-              <div>
+              <div className="flex items-center">
                 {location.countryCode && (
                   <img
                     src={`https://flagcdn.com/${location.countryCode.toLowerCase()}.svg`}
@@ -194,28 +180,32 @@ const HomeSection = ({ locationData }) => {
               </div>
             </div>
             <div className="mt-5 lg:mt-0 lg:flex me-5 space-y-5 lg:space-y-0 items-center justify-center lg:space-x-10 ml-auto order-2 lg:order-2">
-              <PiBagLight size={20} className="2xl:w-10 2xl:h-10" />
-              <LiaUser size={20} className="2xl:w-10 2xl:h-10" />
+              <PiBagLight size={20} className="3xl:w-6 3xl:h-6" />
+              <LiaUser size={20} className="3xl:w-6 3xl:h-6" />
             </div>
           </div>
         </div>
-        <div className="flex ml-2  py-5 mt-3 lg:p-5 md:p-5 font-thin">
-          <PiArrowLeftThin className="m-1 mt-1 2xl:w-8 2xl:h-8" size={20} />
-          <p className="text-xs lg:text-sm 2xl:text-xl my-1">BACK</p>
-        </div>
+        <button className="flex ml-2  py-5 mt-3 lg:p-5 md:p-5 font-thin">
+          <PiArrowLeftThin className="m-1 mt-1 3xl:w-8 3xl:h-8" size={20} />
+          <p className="text-xs lg:text-sm 3xl:text-xl my-1">BACK</p>
+        </button>
         <div
-          className="lg:px-5 md:px-5 ml-3 pt-[18vh] lg:pt-[20] tracking-wider"
+          className="lg:px-5 md:px-5 ml-3 pt-[18vh] lg:pt-[20] "
           data-aos="fade-right "
           data-aos-once="true"
         >
-          <p className="text-lg lg:text-3xl 2xl:text-4xl my-3 ">DISCOVER</p>
-          <p className="text-xl lg:text-4xl 2xl:text-5xl">A NEW WORLD</p>
-          <p className="text-xs lg:text-sm 2xl:text-base my-5 opacity-30 ">
+          <p className="text-lg lg:text-3xl 3xl:text-5xl my-3 tracking-[0.2em]">
+            DISCOVER
+          </p>
+          <p className="text-xl lg:text-4xl 3xl:text-6xl 3xl:my-8 tracking-[0.25em]">
+            A NEW WORLD
+          </p>
+          <p className="text-xs lg:text-sm 2xl:text-lg 3xl:text-2xl my-5 3xl:mt-10 opacity-30 tracking-[0.2em]">
             FOR THOSE WHO WISH FOR MORE...
           </p>
         </div>
-        <div className="pt-[23vh] lg:pt-20 2xl:pt-[35vh] md:pt-20">
-          <p className="text-xs lg:text-sm 2xl:text-base opacity-30 text-center tracking-widest my-1">
+        <div className="pt-[23vh] lg:pt-20 2xl:pt-60 3xl:pt-72 md:pt-20">
+          <p className="text-xs lg:text-sm 2xl:text-lg 3xl:text-2xl opacity-30 text-center tracking-widest my-1">
             BRING THE WORLD CLOSER TOGETHER
           </p>
           <div className="flex items-center justify-center">

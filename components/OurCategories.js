@@ -52,7 +52,7 @@ const OurCategories = () => {
       <div>
         <div className="flex mb-[6vh] mt-[0vh]">
           <p
-            className="text-2xl 2xl:text-4xl tracking-widest my-1"
+            className="text-2xl 3xl:text-4xl tracking-widest my-1"
             data-aos="fade-right"
             data-aos-once="true"
           >
@@ -98,7 +98,7 @@ const OurCategories = () => {
               </div>
               <div className="absolute rounded-lg inset-0 backdrop-brightness-50 flex items-end justify-center">
                 <p
-                  className="text-white 2xl:text-xl tracking-widest py-3 text-xs lg:text-base !-mt-96 lg:py-5"
+                  className="text-white 3xl:text-xl tracking-widest py-3 text-xs lg:text-base !-mt-96 lg:py-5"
                   data-aos="fade-up"
                 >
                   {image.text}
@@ -109,7 +109,7 @@ const OurCategories = () => {
         </div>
         <div className="">
           <p
-            className="text-center 2xl:text-5xl my-[4vh] lg:my-[8vh] lg:text-3xl md:text-2xl text-lg tracking-widest"
+            className="text-center 3xl:text-5xl my-[4vh] lg:my-[8vh] lg:text-3xl md:text-2xl text-lg tracking-widest"
             data-aos="fade-up"
             data-aos-once="true"
           >
@@ -118,7 +118,7 @@ const OurCategories = () => {
         </div>
         <div>
           <p
-            className="text-center 2xl:text-3xl lg:text-2xl md:text-xl text-base tracking-widest"
+            className="text-center 3xl:text-3xl lg:text-2xl md:text-xl text-base tracking-widest"
             data-aos="fade-up"
             data-aos-once="true"
           >

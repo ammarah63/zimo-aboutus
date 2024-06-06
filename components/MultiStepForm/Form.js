@@ -17,7 +17,7 @@ const Form = () => {
   };
 
   return (
-    <div className="relative h-screen bg-white flex justify-center items-center">
+    <div className="fixed inset-0 h-screen bg-white flex justify-center items-center z-50">
       <div className="relative flex items-center justify-center">
         <Image
           width={100}

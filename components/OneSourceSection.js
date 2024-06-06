@@ -26,7 +26,7 @@ const OneSourceSection = () => {
                 <p className="text-lg lg:text-4xl tracking-widest mt-3">
                   ENTRY TICKETS
                 </p>
-                <p className="text-nowrap text-xs lg:text-sm tracking-widest mt-5 opacity-45">
+                <p className="text-nowrap text-xs lg:text-sm 2xl:text-lg tracking-widest mt-5 opacity-45">
                   FOR ALL PREMIUM LISTINGS
                 </p>
               </div>
@@ -44,7 +44,7 @@ const OneSourceSection = () => {
               />
             </div>
             <p
-              className="text-sm lg:text-base tracking-widest mt-10 text-center"
+              className="text-sm lg:text-base 2xl:text-xl  tracking-widest mt-10 text-center"
               data-aos="fade-up"
               data-aos-once="true"
             >
