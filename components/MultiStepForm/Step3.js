@@ -24,7 +24,8 @@ const Step3 = ({onNext}) => {
           </p>
           <p className="text-center opacity-50 text-sm w-[500px] tracking-wide mb-2 mt-2">
             By proceeding, you are confirming that you agree to the information
-            you have provided to be used in accordance with ZIMO'S application processes
+            you have provided to be used in accordance with ZIMO&apos;S
+            application processes
           </p>
         </div>
         <div className="flex justify-end mt-60 ml-20 ">
