@@ -40,7 +40,8 @@ const HomeSection = ({ locationData }) => {
     const year = today.getFullYear();
     const date = today.getDate();
     const day = days[today.getDay()];
-    return `${day}, ${date} ${month}  ${year}`;
+    //return `${day}, ${date} ${month}  ${year}`;
+      return { day, date, month, year };
   }
 
   function getTime() {
@@ -219,7 +220,7 @@ const HomeSection = ({ locationData }) => {
             <p className="text-xs md:text-[0.6rem] lg:text-sm 2xl:text-lg 4xl:text-3xl 3xl:text-2xl opacity-30 text-center tracking-widest ">
               BRING THE WORLD CLOSER TOGETHER
             </p>
-            <div className="flex justify-center mb-10">
+            <div className="flex justify-center mb-14 md:mb-0">
               <PiCaretDownThin
                 width={100}
                 height={100}
