@@ -161,8 +161,12 @@ const HomeSection = ({ locationData }) => {
                     {location.city}, {location.country}
                   </p>
                 )}
-                <p className="hidden md:block text-[0.5rem] 3xl:text-sm 4xl:text-base text-Date text-right tracking-widest text-nowrap uppercase">
-                  {currentDate}
+                <p className="flex text-[0.5rem] 3xl:text-sm 4xl:text-base text-Date text-right tracking-widest text-nowrap uppercase">
+                  {currentDate.day}{" "}
+                  <span className="hidden md:block">
+                    {" "}
+                    , {currentDate.date} {currentDate.month} {currentDate.year}
+                  </span>
                 </p>
               </div>
               <div className="flex items-center">
