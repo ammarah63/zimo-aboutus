@@ -52,7 +52,7 @@ const swiperRef = useRef(null);
       className="bg-white bg-center h-screen p-5 flex justify-center items-center"
     >
       <div className="swiper">
-        <div className="flex mb-[6vh] mt-[0vh]">
+        <div className="flex mb-[10vh] md:mb-[6vh] md:mt-[0vh]">
           <p
             className="md:text-lg lg:text-2xl 3xl:text-4xl 4xl:text-6xl tracking-widest my-1"
             data-aos="fade-right"
@@ -119,7 +119,7 @@ const swiperRef = useRef(null);
         </Swiper>
         <div className="">
           <p
-            className="text-center 3xl:text-5xl 4xl:text-7xl my-[4vh] lg:my-[8vh] lg:text-3xl md:text-lg text-base tracking-widest"
+            className="text-center 3xl:text-5xl 4xl:text-7xl mt-[10vh] my-5 md:my-[4vh] lg:my-[8vh] lg:text-3xl md:text-lg text-base tracking-widest"
             data-aos="fade-up"
             data-aos-once="true"
           >

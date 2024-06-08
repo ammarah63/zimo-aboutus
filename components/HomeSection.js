@@ -126,10 +126,10 @@ const HomeSection = ({ locationData }) => {
                   src={logo}
                   width={100}
                   height={100}
-                  className="max-w-20 md:min-w-10 lg:min-w-32 4xl:min-w-52"
+                  className="max-w-10 md:min-w-10 lg:min-w-32 4xl:min-w-52"
                 />
               </div>
-              <div className="xl:mt-auto">
+              <div className="xl:mt-auto hidden md:block">
                 <p className="lg:text-sm 4xl:text-2xl 4xl:mb-3 xl:-mt-9 md:mt-2 text-xs mt-2 lg:mb-4 lg:ms-3">
                   ABOUT
                 </p>
@@ -149,18 +149,19 @@ const HomeSection = ({ locationData }) => {
               src={logo2}
               width={100}
               height={100}
-              className=" min-h-10 md:mb-16 min-w-20 md:min-h-12 lg:min-w-40 lg:mt-3 4xl:min-w-72"
+              className="-mt-5 md:mb-16 min-w-20 md:min-h-12 lg:min-w-40 lg:mt-3 4xl:min-w-72"
             />
           </div>
           <div className="flex ml-auto col-span-2 flex-col lg:flex-row md:h-14 lg:items-center">
-            <div className="flex order-1 md:mt-3 mt-1 -ms-28 me-3 lg:me-8 lg:my-3 lg:mt-5  lg:order-1">
+            <div className="flex order-1 md:mt-3 mt-1 -ms-14 me-3 lg:me-8 lg:my-3 lg:mt-5  lg:order-1">
               <div>
                 {mounted && (
-                  <p className="text-[0.5rem] 3xl:text-sm 4xl:text-base text-white tracking-widest text-nowrap uppercase">
-                    {currentTime} {location.city}, {location.country}
+                  <p className="flex text-[0.5rem] 3xl:text-sm 4xl:text-base text-white tracking-widest text-nowrap uppercase">
+                    <span className="hidden md:block"> {currentTime}</span>
+                    {location.city}, {location.country}
                   </p>
                 )}
-                <p className="text-[0.5rem] 3xl:text-sm 4xl:text-base text-Date text-right tracking-widest text-nowrap uppercase">
+                <p className="hidden md:block text-[0.5rem] 3xl:text-sm 4xl:text-base text-Date text-right tracking-widest text-nowrap uppercase">
                   {currentDate}
                 </p>
               </div>
@@ -178,11 +179,11 @@ const HomeSection = ({ locationData }) => {
             <div className="mt-5 lg:mt-0 lg:flex me-5 space-y-5 lg:space-y-0 items-center justify-center lg:space-x-10 ml-auto order-2 lg:order-2">
               <PiBagLight
                 size={20}
-                className="md:h-3 md:w-5 lg:h-5 lg:w-5 3xl:w-6 3xl:h-6 4xl:w-8 4xl:h-8"
+                className="h-4 w-4 md:h-3 md:w-5 lg:h-5 lg:w-5 3xl:w-6 3xl:h-6 4xl:w-8 4xl:h-8"
               />
               <LiaUser
                 size={20}
-                className="md:h-3 md:w-3 lg:h-5 lg:w-5  3xl:w-6 3xl:h-6 4xl:w-8 4xl:h-8"
+                className="h-4 w-4 md:h-3 md:w-3 lg:h-5 lg:w-5  3xl:w-6 3xl:h-6 4xl:w-8 4xl:h-8"
               />
             </div>
           </div>
@@ -199,26 +200,26 @@ const HomeSection = ({ locationData }) => {
           data-aos="fade-right"
           data-aos-once="true"
         >
-          <p className="text-base lg:text-3xl 3xl:text-5xl my-1 tracking-[0.2em]">
+          <p className="text-base lg:text-3xl 3xl:text-5xl my-1 tracking-wide">
             DISCOVER
           </p>
           <p className="text-lg lg:text-4xl 4xl:text-7xl 3xl:text-6xl 3xl:my-8 tracking-[0.25em]">
             A NEW WORLD
           </p>
-          <p className="text-[0.6rem] lg:text-sm 4xl:text-3xl 2xl:text-lg 3xl:text-2xl my-5 md:my-3 3xl:mt-10 opacity-30 tracking-[0.2em]">
+          <p className="text-[0.6rem] lg:text-sm 4xl:text-3xl 2xl:text-lg 3xl:text-2xl my-5 md:my-3 3xl:mt-10 opacity-30 tracking-wide">
             FOR THOSE WHO WISH FOR MORE...
           </p>
         </div>
         <div className="absolute left-0 right-0 bottom-0 ">
           <div>
-            <p className="text-[0.6rem] lg:text-sm 2xl:text-lg 4xl:text-3xl 3xl:text-2xl opacity-30 text-center tracking-widest ">
+            <p className="text-xs md:text-[0.6rem] lg:text-sm 2xl:text-lg 4xl:text-3xl 3xl:text-2xl opacity-30 text-center tracking-widest ">
               BRING THE WORLD CLOSER TOGETHER
             </p>
-            <div className="flex justify-center">
+            <div className="flex justify-center mb-10">
               <PiCaretDownThin
                 width={100}
                 height={100}
-                className=" animate-bounce hover:animate-ping md:h-8 md:w-8 lg:h-20 lg:w-20 4xl:h-36 4xl:w-36"
+                className=" animate-bounce hover:animate-ping h-8 w-8 lg:h-20 lg:w-20 4xl:h-36 4xl:w-36"
                 onClick={handleScroll}
               />
             </div>

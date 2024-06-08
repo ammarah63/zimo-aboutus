@@ -7,7 +7,7 @@ const OneSourceSection = () => {
     <>
       <div className="bg-white bg-center h-screen p-5 lg:p-5 flex items-center justify-center">
         <div className="lg:grid lg:grid-cols-3 md:mb-12 lg:mb-12 lg:gap-2 md:grid md:grid-cols-3 md:gap-2">
-          <div className="flex justify-center mt-12 lg:-mt-10 md:mt-0">
+          <div className="flex justify-center lg:-mt-10 md:mt-0">
             <div>
               <div className="flex lg:ml-6 md:ml-6 justify-center">
                 <Image
@@ -42,7 +42,7 @@ const OneSourceSection = () => {
                 src={pic1}
                 width={100}
                 height={100}
-                className=" xl:min-w-[50vw] lg:min-w-[60vw]  md:min-w-[52vw]  "
+                className="min-w-[80vw] xl:min-w-[50vw] lg:min-w-[60vw]  md:min-w-[52vw]  "
                 data-aos="fade-right"
                 data-aos-once="true"
               />

@@ -25,10 +25,10 @@ const AlertSection = () => {
               data-aos-once="true"
             >
               <div className="4xl:ml-auto xl:ml-auto ml-auto ">
-                <p className="text-base ml-auto xl:ml-auto xl:w-7/12 lg:text-2xl 2xl:text-2xl 2xl:tracking-[0.2em] 2xl:w-7/12 4xl:w-4/5 2xl:text-nowrap 2xl:ml-auto 3xl:text-5xl 4xl:text-6xl 3xl:tracking-[0.2em] 3xl:w-10/12 3xl:text-nowrap 3xl:ml-auto tracking-widest">
+                <p className="text-sm md:text-base text-nowrap md:text-wrap ml-auto xl:ml-auto xl:w-7/12 lg:text-2xl 2xl:text-2xl 2xl:tracking-[0.2em] 2xl:w-7/12 4xl:w-4/5 2xl:text-nowrap 2xl:ml-auto 3xl:text-5xl 4xl:text-6xl 3xl:tracking-[0.2em] 3xl:w-10/12 3xl:text-nowrap 3xl:ml-auto tracking-widest">
                   PERSONALISED FOR YOU
                 </p>
-                <div className="w-[31vw] 4xl:ml-auto ml-auto xl:w-7/12 4xl:w-9/12 lg:w-[33vw] 3xl:w-10/12 3xl:ml-auto 2xl:w-7/12 2xl:ml-auto">
+                <div className="w-[53vw] md:w-[31vw] 4xl:ml-auto ml-auto xl:w-7/12 4xl:w-9/12 lg:w-[33vw] 3xl:w-10/12 3xl:ml-auto 2xl:w-7/12 2xl:ml-auto">
                   <p className="text-xs lg:text-sm ml-auto text-justify 4xl:ml-auto tracking-widest md:mt-3 lg:mt-3 opacity-45 2xl:text-sm 2xl:mt-5 2xl:text-justify xl:tracking-wide lg:tracking-wide 2xl:tracking-[0.1em] 3xl:text-2xl 4xl:text-3xl 3xl:mt-9 3xl:text-justify 3xl:tracking-[0.2em] ">
                     DELIVERING THOUSANDS OF PERSONALISED ALERTS EVERYDAY, OUR
                     USERS CAN BE FIRST IN LINE WHEN THAT OPPORTUNITY OF A
@@ -38,7 +38,7 @@ const AlertSection = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-1 px-10 lg:mt-12">
+          <div className="grid grid-cols-2 gap-1 mt-16 md:px-10 lg:mt-12">
             <div>
               <Image
                 src={pic1}
@@ -52,7 +52,7 @@ const AlertSection = () => {
             <div className="ml-auto">
               <div className="flex">
                 <button
-                  className="flex text-xs 4xl:text-3xl lg:text-sm 3xl:text-xl tracking-widest mt-24 text-justify"
+                  className="flex text-xs text-nowrap 4xl:text-3xl lg:text-sm 3xl:text-xl tracking-widest mt-24 text-justify"
                   data-aos="fade-up"
                   data-aos-once="true"
                 >
