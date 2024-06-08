@@ -8,22 +8,20 @@ import {
   GlobalSection,
   ZimoPartnersSection,
   LastSection,
-  OneSourceSectionmy,
-  MultiStepform
+  MultiStepform,
 } from "../components";
 
 export default function Home({ location }) {
- useEffect(() => {
-   console.log("location api", location);
- }, [location]);
+  useEffect(() => {
+    console.log("location api", location);
+  }, [location]);
 
   return (
     <>
       <HomeSection locationData={location} />
       <RealStateSection />
       <OurCategories />
-      {/* <OneSourceSection /> */}
-      <OneSourceSectionmy />
+      <OneSourceSection />
       <AlertSection />
       {/* <MultiStepform/> */}
       <GlobalSection />

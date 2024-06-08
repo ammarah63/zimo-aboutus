@@ -17,7 +17,9 @@ module.exports = {
     },
     extend: {
       screens: {
+        "xl": "1366px",
         "3xl": "1920px",
+        "4xl": "2560px",
       },
       backgroundImage: {
         "home-section": "url('/public/images/2023-01-19_22-48-19.png')",
@@ -36,4 +38,3 @@ module.exports = {
   },
   plugins: [],
 };
-

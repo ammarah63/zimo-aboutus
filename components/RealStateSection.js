@@ -40,10 +40,13 @@ const RealStateSection = () => {
 
   return (
     <>
-      <div className="bg-white bg-center h-screen py-5 px-5 lg:px-10 ">
-        <div id="realStateSection">
+      <div
+        id="realStateSection"
+        className="bg-white bg-center relative h-screen py-5 px-5 lg:px-10 "
+      >
+        <div>
           <p
-            className="text-center mt-6 text-xs lg:text-sm 3xl:text-lg tracking-widest"
+            className="text-center mt-6 md:mt-0 xl:mt-4 4xl:mt-10 text-[0.6rem] lg:text-sm 3xl:text-lg 4xl:text-3xl tracking-widest"
             data-aos="fade-up"
             data-aos-once="true"
           >
@@ -53,18 +56,18 @@ const RealStateSection = () => {
         <div className="flex justify-center items-center ">
           <div>
             <div
-              className=" grid grid-cols-2 gap-1 mt-14 lg:mt-12 3xl:mt-20"
+              className=" grid grid-cols-2 gap-1 mt-10 3xl:mt-20 4xl:mt-28"
               data-aos="fade-right"
               data-aos-once="true"
             >
               <div>
-                <p className="text-xs lg:text-2xl 3xl:text-4xl tracking-widest 2xl:tracking-[0.11em]">
+                <p className="text-xs lg:text-2xl 3xl:text-4xl 4xl:text-5xl tracking-widest 2xl:tracking-[0.11em]">
                   A REVOLUTIONARY PLATFORM
                 </p>
-                <p className="text-base lg:text-4xl 3xl:text-6xl mt-2 2xl:tracking-[0.17em] 3xl:tracking-widest">
+                <p className="text-base lg:text-4xl xl:tracking-[0.17em] 4xl:tracking-[0.18em] tracking-widest 4xl:text-7xl 3xl:text-6xl mt-2 2xl:tracking-[0.17em] 3xl:tracking-widest">
                   ENTRIES - SELLERS
                 </p>
-                <p className="text-lg   lg:text-5xl 3xl:text-7xl mt-2 2xl:tracking-[0.27em] 3xl:tracking-[0.27em]">
+                <p className="text-lg  4xl:text-8xl lg:text-5xl xl:tracking-[0.27em] 3xl:text-7xl mt-2 2xl:tracking-[0.27em] 3xl:tracking-[0.27em]">
                   WORLDWIDE
                 </p>
               </div>
@@ -82,30 +85,30 @@ const RealStateSection = () => {
                     src={logo}
                     width={100}
                     height={100}
-                    className="min-w-52 lg:min-h-20 lg:min-w-96 3xl:min-w-[28vw]"
+                    className="min-w-44 lg:min-h-20 lg:min-w-96 3xl:min-w-[28vw] "
                   />
                 </div>
-                <p className="text-center text-xs lg:text-sm 3xl:text-lg tracking-widest mt-7">
+                <p className="text-center text-[0.6rem] lg:text-sm 3xl:text-lg 4xl:text-3xl  4xl:mt-16 tracking-widest mt-3">
                   CONNECTING USERS FROM ACROSS THE GLOBE
                 </p>
-                <p className="text-center  text-xs lg:text-sm 3xl:text-lg tracking-widest">
+                <p className="text-center  text-[0.6rem] lg:text-sm 3xl:text-lg 4xl:text-3xl 4xl:my-5 tracking-widest">
                   TO FACILITATE LIFE&apos;S MOST IMPORTANT
                 </p>
-                <p className="text-center  text-xs lg:text-sm 3xl:text-lg tracking-widest">
+                <p className="text-center  text-[0.6rem] lg:text-sm 3xl:text-lg 4xl:text-3xl tracking-widest">
                   PERSONAL TRANSACTIONS
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-1 lg:-mt-10 2xl:mt-10 3xl:mt-10">
+            <div className="grid grid-cols-2 gap-1  xl:mt-auto 3xl:mt-10">
               <div
                 data-aos="fade-right"
                 data-aos-once="true"
-                className="overflow-hidden"
+                className="overflow-hidden "
               >
-                <p className="text-base lg:text-3xl 3xl:text-5xl tracking-widest">
+                <p className="text-sm lg:text-3xl 3xl:text-5xl 4xl:text-7xl tracking-widest">
                   THE BEST OF THE BEST
                 </p>
-                <p className="tracking-widest text-xs lg:text-sm  2xl:text-lg 2xl:tracking-[0.17em] 3xl:text-lg 3xl:tracking-[0.2em] mt-4 lg:mt-7">
+                <p className="tracking-widest text-[0.6rem] lg:text-sm md:mt-2 2xl:text-lg 2xl:tracking-[0.17em] 4xl:text-3xl 4xl:mt-16 3xl:text-lg 3xl:tracking-[0.2em] mt-4 2xl:mt-7">
                   A COMBINATION OF AUTOMATION AND MANUAL CURATION OUR PRO AGENTS
                   AND MODERATION TEAM SELECTS THE HIGHEST QUALITY LISTINGS ON
                   THE MARKET FROM ACROSS THE WORLD.
@@ -115,14 +118,12 @@ const RealStateSection = () => {
             </div>
           </div>
         </div>
-        <div>
-          <div className="flex items-center justify-center mt-32">
-            <PiCaretDownThin
-              size={75}
-              className=" animate-bounce hover:animate-ping"
-              onClick={handleScroll}
-            />
-          </div>
+        <div className="absolute inset-x-0 bottom-5 flex justify-center">
+          <PiCaretDownThin
+            size={75}
+            className=" animate-bounce hover:animate-ping md:h-8 md:w-8 lg:h-20 lg:w-20 4xl:h-40 4xl:w-40"
+            onClick={handleScroll}
+          />
         </div>
       </div>
     </>

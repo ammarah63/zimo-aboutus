@@ -62,12 +62,6 @@ const HomeSection = ({ locationData }) => {
 
   useEffect(() => {
     setMounted(true);
-
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-
     const timer = setInterval(() => {
       setCurrentTime(getTime());
     }, 1000);
@@ -122,49 +116,51 @@ const HomeSection = ({ locationData }) => {
         style={{
           backgroundImage: "url('/images/2023-01-19_22-48-19.svg')",
         }}
-        className=" bg-cover bg-center h-screen lg:p-10 2xl:p-7 text-white"
+        className=" bg-cover bg-center relative h-screen min-h-screen lg:p-3 2xl:p-7 text-white"
       >
-        <div className="grid grid-cols-6">
-          <div className="ml-3 lg:flex md:flex col-span-2 mt-3 lg:mt-2">
-            <div className="flex order-2 lg:order-2 md:order-2">
+        <div className="grid grid-cols-6 ">
+          <div className="ml-3 lg:ml-0 lg:flex md:flex col-span-2 mt-3 md:h-14 lg:mt-4">
+            <div className="flex order-2 lg:order-2 md:order-2 ">
               <div className="pe-1 lg:px-2">
                 <Image
                   src={logo}
                   width={100}
                   height={100}
-                  className="max-w-20 lg:min-w-32"
+                  className="max-w-20 md:min-w-10 lg:min-w-32 4xl:min-w-52"
                 />
               </div>
-              <div>
-                <p className="lg:text-sm text-xs mt-2 lg:mt-5 lg:ms-3">ABOUT</p>
+              <div className="xl:mt-auto">
+                <p className="lg:text-sm 4xl:text-2xl 4xl:mb-3 xl:-mt-9 md:mt-2 text-xs mt-2 lg:mb-4 lg:ms-3">
+                  ABOUT
+                </p>
               </div>
             </div>
             <div className="order-1 md:order-1 lg:order-1 mt-3 md:mt-0 lg:mt-0">
               <Image
                 src={logo1}
                 width={50}
-                className="max-w-8 lg:min-w-14 lg:mx-5 my-auto md:mx-2"
+                className="max-w-8 lg:min-w-14 lg:mx-5 my-auto md:mx-2 4xl:min-w-20"
               />
             </div>
           </div>
 
-          <div className="flex items-center justify-center col-span-2">
+          <div className="flex lg:items-center justify-center col-span-2">
             <Image
               src={logo2}
               width={100}
               height={100}
-              className=" min-h-10  min-w-20 lg:min-w-40 lg:mt-0"
+              className=" min-h-10 md:mb-16 min-w-20 md:min-h-12 lg:min-w-40 lg:mt-3 4xl:min-w-72"
             />
           </div>
-          <div className="flex ml-auto col-span-2 flex-col lg:flex-row  lg:items-center">
-            <div className="flex order-1 mt-1 -ms-28 me-3 lg:me-8 lg:my-3 lg:mt-5  lg:order-1">
+          <div className="flex ml-auto col-span-2 flex-col lg:flex-row md:h-14 lg:items-center">
+            <div className="flex order-1 md:mt-3 mt-1 -ms-28 me-3 lg:me-8 lg:my-3 lg:mt-5  lg:order-1">
               <div>
                 {mounted && (
-                  <p className="text-[0.6rem] 3xl:text-sm text-white tracking-widest text-nowrap uppercase">
+                  <p className="text-[0.5rem] 3xl:text-sm 4xl:text-base text-white tracking-widest text-nowrap uppercase">
                     {currentTime} {location.city}, {location.country}
                   </p>
                 )}
-                <p className="text-[0.6rem] 3xl:text-sm text-Date text-right tracking-widest text-nowrap uppercase">
+                <p className="text-[0.5rem] 3xl:text-sm 4xl:text-base text-Date text-right tracking-widest text-nowrap uppercase">
                   {currentDate}
                 </p>
               </div>
@@ -174,45 +170,58 @@ const HomeSection = ({ locationData }) => {
                     src={`https://flagcdn.com/${location.countryCode.toLowerCase()}.svg`}
                     width="30"
                     alt={`Flag of ${location.countryCode}`}
-                    className="lg:mx-3 ms-3 my-1"
+                    className="lg:mx-3 ms-3"
                   />
                 )}
               </div>
             </div>
             <div className="mt-5 lg:mt-0 lg:flex me-5 space-y-5 lg:space-y-0 items-center justify-center lg:space-x-10 ml-auto order-2 lg:order-2">
-              <PiBagLight size={20} className="3xl:w-6 3xl:h-6" />
-              <LiaUser size={20} className="3xl:w-6 3xl:h-6" />
+              <PiBagLight
+                size={20}
+                className="md:h-3 md:w-5 lg:h-5 lg:w-5 3xl:w-6 3xl:h-6 4xl:w-8 4xl:h-8"
+              />
+              <LiaUser
+                size={20}
+                className="md:h-3 md:w-3 lg:h-5 lg:w-5  3xl:w-6 3xl:h-6 4xl:w-8 4xl:h-8"
+              />
             </div>
           </div>
         </div>
-        <button className="flex ml-2  py-5 mt-3 lg:p-5 md:p-5 font-thin">
-          <PiArrowLeftThin className="m-1 mt-1 3xl:w-8 3xl:h-8" size={20} />
-          <p className="text-xs lg:text-sm 3xl:text-xl my-1">BACK</p>
+        <button className="flex ml-2 4xl:text-2xl md:-mt-14 py-1 mt-1 lg:p-5 md:px-5 font-thin">
+          <PiArrowLeftThin
+            className="m-1 mt-1 w-4 h-4 3xl:w-8 3xl:h-8"
+            size={20}
+          />
+          <p className="text-[0.6rem] lg:text-sm 3xl:text-xl my-1">BACK</p>
         </button>
         <div
-          className="lg:px-5 md:px-5 ml-3 pt-[18vh] lg:pt-[20] "
-          data-aos="fade-right "
+          className="lg:px-5 md:px-5 ml-3 pt-[18vh] lg:pt-[20] justify-between"
+          data-aos="fade-right"
           data-aos-once="true"
         >
-          <p className="text-lg lg:text-3xl 3xl:text-5xl my-3 tracking-[0.2em]">
+          <p className="text-base lg:text-3xl 3xl:text-5xl my-1 tracking-[0.2em]">
             DISCOVER
           </p>
-          <p className="text-xl lg:text-4xl 3xl:text-6xl 3xl:my-8 tracking-[0.25em]">
+          <p className="text-lg lg:text-4xl 4xl:text-7xl 3xl:text-6xl 3xl:my-8 tracking-[0.25em]">
             A NEW WORLD
           </p>
-          <p className="text-xs lg:text-sm 2xl:text-lg 3xl:text-2xl my-5 3xl:mt-10 opacity-30 tracking-[0.2em]">
+          <p className="text-[0.6rem] lg:text-sm 4xl:text-3xl 2xl:text-lg 3xl:text-2xl my-5 md:my-3 3xl:mt-10 opacity-30 tracking-[0.2em]">
             FOR THOSE WHO WISH FOR MORE...
           </p>
         </div>
-        <div className="pt-[23vh] lg:pt-20 2xl:pt-60 3xl:pt-72 md:pt-20">
-          <p className="text-xs lg:text-sm 2xl:text-lg 3xl:text-2xl opacity-30 text-center tracking-widest my-1">
-            BRING THE WORLD CLOSER TOGETHER
-          </p>
-          <div className="flex items-center justify-center">
-            <PiCaretDownThin
-              className=" animate-bounce hover:animate-ping h-20 w-20 lg:h-24"
-              onClick={handleScroll}
-            />
+        <div className="absolute left-0 right-0 bottom-0 ">
+          <div>
+            <p className="text-[0.6rem] lg:text-sm 2xl:text-lg 4xl:text-3xl 3xl:text-2xl opacity-30 text-center tracking-widest ">
+              BRING THE WORLD CLOSER TOGETHER
+            </p>
+            <div className="flex justify-center">
+              <PiCaretDownThin
+                width={100}
+                height={100}
+                className=" animate-bounce hover:animate-ping md:h-8 md:w-8 lg:h-20 lg:w-20 4xl:h-36 4xl:w-36"
+                onClick={handleScroll}
+              />
+            </div>
           </div>
         </div>
       </div>
