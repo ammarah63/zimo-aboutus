@@ -125,7 +125,7 @@ const HomeSection = ({ locationData }) => {
               <Image
                 src={logo1}
                 width={50}
-                className="max-w-8 lg:min-w-14 lg:mx-5 my-auto mx-2 4xl:min-w-20"
+                className="max-w-6 lg:min-w-14 lg:mx-5 my-auto mx-2 4xl:min-w-20"
               />
 
               <Image
@@ -142,7 +142,7 @@ const HomeSection = ({ locationData }) => {
               src={logo2}
               width={100}
               height={100}
-              className="-mt-5 md:mb-16 min-w-8 md:min-w-20 md:min-h-12 lg:min-w-40 lg:mt-3 4xl:min-w-72"
+              className="-mt-5 md:mb-16 min-w-5 md:min-w-20 md:min-h-12 lg:min-w-40 lg:mt-3 4xl:min-w-72"
             />
           </div>
           <div className="col-span-2 flex space-x-5 pe-5 mt-1 md:mt-3">
@@ -176,7 +176,7 @@ const HomeSection = ({ locationData }) => {
               </div>
             </div>
 
-            <div className="flex space-x-5 md:space-x-10">
+            <div className="flex space-x-5 md:space-x-10 mt-1">
               {" "}
               <PiBagLight
                 size={20}
