@@ -183,7 +183,7 @@ const HomeSection = ({ locationData }) => {
                 )}
               </div>
             </div>
-            <div className="mt-0 md:mt-5 lg:mt-0 space-x-5 flex md:flex-none lg:flex me-5 md:space-y-5 lg:space-y-0 items-center justify-center lg:space-x-10 ml-auto md:order-2 lg:order-2">
+            <div className="-mt-3 md:mt-5 lg:mt-0 space-x-5 flex md:flex-none lg:flex me-5 md:space-y-5 lg:space-y-0 items-center justify-center lg:space-x-10 ml-auto md:order-2 lg:order-2">
               <PiBagLight
                 size={20}
                 className="h-4 w-4 md:h-3 md:w-5 lg:h-5 lg:w-5 3xl:w-6 3xl:h-6 4xl:w-8 4xl:h-8"
