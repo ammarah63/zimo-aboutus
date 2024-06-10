@@ -142,10 +142,10 @@ const HomeSection = ({ locationData }) => {
               src={logo2}
               width={100}
               height={100}
-              className="-mt-5 md:mb-16 min-w-20 md:min-h-12 lg:min-w-40 lg:mt-3 4xl:min-w-72"
+              className="-mt-5 md:mb-16 min-w-8 md:min-w-20 md:min-h-12 lg:min-w-40 lg:mt-3 4xl:min-w-72"
             />
           </div>
-          <div className="col-span-2 flex space-x-10 pe-5 mt-3">
+          <div className="col-span-2 flex space-x-5 pe-5 mt-1 md:mt-3">
             <div className="flex ml-auto">
               <div className="hidden md:block">
                 {mounted && (
