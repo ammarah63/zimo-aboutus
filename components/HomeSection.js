@@ -41,7 +41,7 @@ const HomeSection = ({ locationData }) => {
     const date = today.getDate();
     const day = days[today.getDay()];
     //return `${day}, ${date} ${month}  ${year}`;
-      return { day, date, month, year };
+    return { day, date, month, year };
   }
 
   function getTime() {
@@ -119,7 +119,77 @@ const HomeSection = ({ locationData }) => {
         }}
         className=" bg-cover bg-center relative h-screen min-h-screen lg:p-3 2xl:p-7 text-white"
       >
-        <div className="grid grid-cols-6 ">
+        <div className="grid grid-cols-6 py-2">
+          <div className="col-span-2 mt-auto md:mt-0">
+            <div className="flex ">
+              <Image
+                src={logo1}
+                width={50}
+                className="max-w-8 lg:min-w-14 lg:mx-5 my-auto mx-2 4xl:min-w-20"
+              />
+
+              <Image
+                src={logo}
+                width={100}
+                height={100}
+                className="max-w-16 md:min-w-10 lg:min-w-32 4xl:min-w-52"
+              />
+              <p className="hidden md:block mt-auto mx-5">ABOUT</p>
+            </div>
+          </div>
+          <div className="col-span-2 flex justify-center mt-auto md:-mt-4">
+            <Image
+              src={logo2}
+              width={100}
+              height={100}
+              className="-mt-5 md:mb-16 min-w-20 md:min-h-12 lg:min-w-40 lg:mt-3 4xl:min-w-72"
+            />
+          </div>
+          <div className="col-span-2 flex space-x-10 pe-5 mt-3">
+            <div className="flex ml-auto">
+              <div className="hidden md:block">
+                {mounted && (
+                  <p className="flex text-[0.5rem] 3xl:text-sm 4xl:text-base text-white tracking-widest text-nowrap uppercase">
+                    <span className="hidden md:block"> {currentTime}</span>
+                    {location.city}, {location.country}
+                  </p>
+                )}
+                <p className="flex text-[0.5rem] 3xl:text-sm 4xl:text-base text-Date text-right tracking-widest text-nowrap uppercase">
+                  {currentDate.day}{" "}
+                  <span className="hidden md:block">
+                    {" "}
+                    , {currentDate.date} {currentDate.month} {currentDate.year}
+                  </span>
+                </p>
+              </div>
+              <div className="flex items-center">
+                {location.countryCode && (
+                  <>
+                    <img
+                      src={`https://flagcdn.com/${location.countryCode.toLowerCase()}.svg`}
+                      width="30"
+                      alt={`Flag of ${location.countryCode}`}
+                      className="lg:mx-3 ms-3 h-5 w-5 md:h-unset md:w-unset"
+                    />
+                  </>
+                )}
+              </div>
+            </div>
+
+            <div className="flex space-x-5 md:space-x-10">
+              {" "}
+              <PiBagLight
+                size={20}
+                className="h-4 w-4 md:h-3 md:w-5 lg:h-5 lg:w-5 3xl:w-6 3xl:h-6 4xl:w-8 4xl:h-8"
+              />
+              <LiaUser
+                size={20}
+                className="h-4 w-4 md:h-3 md:w-3 lg:h-5 lg:w-5  3xl:w-6 3xl:h-6 4xl:w-8 4xl:h-8"
+              />
+            </div>
+          </div>
+        </div>
+        {/* <div className="grid grid-cols-6 ">
           <div className="ml-3 lg:ml-0 lg:flex md:flex col-span-2 mt-3 md:h-14 lg:mt-4">
             <div className="flex order-2 lg:order-2 md:order-2 ">
               <div className="pe-1 lg:px-2">
@@ -183,7 +253,7 @@ const HomeSection = ({ locationData }) => {
                 )}
               </div>
             </div>
-            <div className="-mt-5 md:mt-5 lg:mt-0 space-x-5 flex md:flex-none lg:flex me-5 md:space-y-5 lg:space-y-0 items-center justify-center lg:space-x-10 ml-auto md:order-2 lg:order-2">
+            <div className="-mt-4 md:mt-5 lg:mt-0 space-x-5 flex md:flex-none lg:flex me-5 md:space-y-5 lg:space-y-0 items-center justify-center lg:space-x-10 ml-auto md:order-2 lg:order-2">
               <PiBagLight
                 size={20}
                 className="h-4 w-4 md:h-3 md:w-5 lg:h-5 lg:w-5 3xl:w-6 3xl:h-6 4xl:w-8 4xl:h-8"
@@ -194,7 +264,7 @@ const HomeSection = ({ locationData }) => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
         <button className="flex ml-2 4xl:text-2xl md:-mt-14 py-1 mt-4 lg:p-5 md:px-5 font-thin">
           <PiArrowLeftThin
             className="m-1 mt-1 w-4 h-4 3xl:w-8 3xl:h-8"
