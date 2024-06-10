@@ -176,7 +176,7 @@ const HomeSection = ({ locationData }) => {
               </div>
             </div>
 
-            <div className="flex space-x-5 md:space-x-10 mt-1">
+            <div className="flex space-x-5 md:space-x-10 mt-0">
               {" "}
               <PiBagLight
                 size={20}
