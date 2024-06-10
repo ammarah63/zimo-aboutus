@@ -153,7 +153,7 @@ const HomeSection = ({ locationData }) => {
               className="-mt-5 md:mb-16 min-w-20 md:min-h-12 lg:min-w-40 lg:mt-3 4xl:min-w-72"
             />
           </div>
-          <div className="flex  ml-auto col-span-2 md:flex-col lg:flex-row md:h-14 lg:items-center">
+          <div className="flex-row  ml-auto col-span-2 md:flex-col lg:flex-row md:h-14 lg:items-center">
             <div className="flex me-14 order-1 md:mt-3 -ms-14 md:me-3 lg:me-8 lg:my-3 lg:mt-5  lg:order-1">
               <div className="hidden md:block">
                 {mounted && (
@@ -172,12 +172,14 @@ const HomeSection = ({ locationData }) => {
               </div>
               <div className="flex items-center">
                 {location.countryCode && (
-                  <img
-                    src={`https://flagcdn.com/${location.countryCode.toLowerCase()}.svg`}
-                    width="30"
-                    alt={`Flag of ${location.countryCode}`}
-                    className="lg:mx-3 ms-3"
-                  />
+                  <>
+                    <img
+                      src={`https://flagcdn.com/${location.countryCode.toLowerCase()}.svg`}
+                      width="30"
+                      alt={`Flag of ${location.countryCode}`}
+                      className="lg:mx-3 ms-3 h-5 w-5 md:h-unset md:w-unset"
+                    />
+                  </>
                 )}
               </div>
             </div>
