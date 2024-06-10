@@ -127,7 +127,7 @@ const HomeSection = ({ locationData }) => {
                   src={logo}
                   width={100}
                   height={100}
-                  className="max-w-10 md:min-w-10 lg:min-w-32 4xl:min-w-52"
+                  className="max-w-16 md:min-w-10 lg:min-w-32 4xl:min-w-52"
                 />
               </div>
               <div className="xl:mt-auto hidden md:block">
@@ -153,9 +153,9 @@ const HomeSection = ({ locationData }) => {
               className="-mt-5 md:mb-16 min-w-20 md:min-h-12 lg:min-w-40 lg:mt-3 4xl:min-w-72"
             />
           </div>
-          <div className="flex ml-auto col-span-2 flex-col lg:flex-row md:h-14 lg:items-center">
-            <div className="flex order-1 md:mt-3 mt-1 -ms-14 me-3 lg:me-8 lg:my-3 lg:mt-5  lg:order-1">
-              <div>
+          <div className="flex  ml-auto col-span-2 md:flex-col lg:flex-row md:h-14 lg:items-center">
+            <div className="flex me-14 order-1 md:mt-3 mt-1 -ms-14 md:me-3 lg:me-8 lg:my-3 lg:mt-5  lg:order-1">
+              <div className="hidden md:block">
                 {mounted && (
                   <p className="flex text-[0.5rem] 3xl:text-sm 4xl:text-base text-white tracking-widest text-nowrap uppercase">
                     <span className="hidden md:block"> {currentTime}</span>
@@ -181,7 +181,7 @@ const HomeSection = ({ locationData }) => {
                 )}
               </div>
             </div>
-            <div className="mt-5 lg:mt-0 lg:flex me-5 space-y-5 lg:space-y-0 items-center justify-center lg:space-x-10 ml-auto order-2 lg:order-2">
+            <div className="mt-5 lg:mt-0  lg:flex me-5 md:space-y-5 lg:space-y-0 items-center justify-center lg:space-x-10 ml-auto md:order-2 lg:order-2">
               <PiBagLight
                 size={20}
                 className="h-4 w-4 md:h-3 md:w-5 lg:h-5 lg:w-5 3xl:w-6 3xl:h-6 4xl:w-8 4xl:h-8"
@@ -193,7 +193,7 @@ const HomeSection = ({ locationData }) => {
             </div>
           </div>
         </div>
-        <button className="flex ml-2 4xl:text-2xl md:-mt-14 py-1 mt-1 lg:p-5 md:px-5 font-thin">
+        <button className="flex ml-2 4xl:text-2xl md:-mt-14 py-1 mt-4 lg:p-5 md:px-5 font-thin">
           <PiArrowLeftThin
             className="m-1 mt-1 w-4 h-4 3xl:w-8 3xl:h-8"
             size={20}
