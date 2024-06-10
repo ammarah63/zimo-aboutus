@@ -153,7 +153,7 @@ const HomeSection = ({ locationData }) => {
               className="-mt-5 md:mb-16 min-w-20 md:min-h-12 lg:min-w-40 lg:mt-3 4xl:min-w-72"
             />
           </div>
-          <div className="flex-row mt-5 md:mt-0  ml-auto col-span-2 md:flex-col lg:flex-row md:h-14 lg:items-center">
+          <div className="flex-row mt-3 md:mt-0  ml-auto col-span-2 md:flex-col lg:flex-row md:h-14 lg:items-center">
             <div className="flex me-14 order-1 md:mt-3 -ms-14 md:me-3 lg:me-8 lg:my-3 lg:mt-5  lg:order-1">
               <div className="hidden md:block">
                 {mounted && (
@@ -183,7 +183,7 @@ const HomeSection = ({ locationData }) => {
                 )}
               </div>
             </div>
-            <div className="md:mt-5 lg:mt-0 space-x-5 flex md:flex-none lg:flex me-5 md:space-y-5 lg:space-y-0 items-center justify-center lg:space-x-10 ml-auto md:order-2 lg:order-2">
+            <div className="mt-0 md:mt-5 lg:mt-0 space-x-5 flex md:flex-none lg:flex me-5 md:space-y-5 lg:space-y-0 items-center justify-center lg:space-x-10 ml-auto md:order-2 lg:order-2">
               <PiBagLight
                 size={20}
                 className="h-4 w-4 md:h-3 md:w-5 lg:h-5 lg:w-5 3xl:w-6 3xl:h-6 4xl:w-8 4xl:h-8"
