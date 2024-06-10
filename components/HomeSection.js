@@ -169,14 +169,14 @@ const HomeSection = ({ locationData }) => {
                       src={`https://flagcdn.com/${location.countryCode.toLowerCase()}.svg`}
                       width="30"
                       alt={`Flag of ${location.countryCode}`}
-                      className="lg:mx-3 md:-mt-5 ms-3 h-5 w-5 md:h-unset md:w-unset"
+                      className="lg:mx-3 md:-mt-10 ms-3 h-5 w-5 md:h-unset md:w-unset"
                     />
                   </>
                 )}
               </div>
             </div>
 
-            <div className="flex space-x-5 md:space-x-10 mt-0">
+            <div className="flex space-x-5 md:space-x-10">
               {" "}
               <PiBagLight
                 size={20}

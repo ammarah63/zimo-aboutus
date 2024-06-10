@@ -17,7 +17,7 @@ module.exports = {
     },
     extend: {
       screens: {
-        "xl": "1366px",
+        xl: "1366px",
         "3xl": "1920px",
         "4xl": "2560px",
       },
@@ -33,6 +33,10 @@ module.exports = {
       },
       borderWidth: {
         1: "1px",
+      },
+      spacing: {
+        "50%": "50%",
+        "10%": "50%",
       },
     },
   },
