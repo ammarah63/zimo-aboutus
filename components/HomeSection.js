@@ -132,7 +132,7 @@ const HomeSection = ({ locationData }) => {
                 src={logo}
                 width={100}
                 height={100}
-                className="max-w-16 md:min-w-10 lg:min-w-32 4xl:min-w-52"
+                className="max-w-14 md:min-w-10 lg:min-w-32 4xl:min-w-52"
               />
               <p className="hidden md:block mt-auto mx-5">ABOUT</p>
             </div>
@@ -142,7 +142,7 @@ const HomeSection = ({ locationData }) => {
               src={logo2}
               width={100}
               height={100}
-              className="-mt-5 md:mb-16 min-w-5 md:min-w-20 md:min-h-12 lg:min-w-40 lg:mt-3 4xl:min-w-72"
+              className="-mt-5 md:mt-0 md:mb-16 w-16 md:min-w-20 md:min-h-12 lg:min-w-40 lg:mt-3 4xl:min-w-72"
             />
           </div>
           <div className="col-span-2 flex space-x-5 pe-5 mt-1 md:mt-3">
@@ -169,7 +169,7 @@ const HomeSection = ({ locationData }) => {
                       src={`https://flagcdn.com/${location.countryCode.toLowerCase()}.svg`}
                       width="30"
                       alt={`Flag of ${location.countryCode}`}
-                      className="lg:mx-3 ms-3 h-5 w-5 md:h-unset md:w-unset"
+                      className="lg:mx-3 md:-mt-5 ms-3 h-5 w-5 md:h-unset md:w-unset"
                     />
                   </>
                 )}
