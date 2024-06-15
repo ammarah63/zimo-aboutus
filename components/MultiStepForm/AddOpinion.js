@@ -1,16 +1,40 @@
-const AddOpinion = () => {
-    return (
-      <>
-        <div className="flex justify-center items-center ml-44 pb-20">
-          <div className="mb-20">
+import { useDispatch , useSelector} from "react-redux";
+import { setAddOpinion } from "@/redux/slices/ApplicantSlice";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+
+const AddOpinion = ({ onPrev }) => {
+   const data = useSelector((state) => state.auth.Step1);
+  const dispatch = useDispatch();
+
+  const Formik = useFormik({
+    initialValues: {
+      Opinion: "",
+    },
+    validationSchema: Yup.object({
+      Opinion: Yup.string(),
+    }),
+    onSubmit: (values) => {
+      console.log(values.Opinion);
+      dispatch(setAddOpinion({values}));
+      onPrev();
+    },
+  });
+
+  const handleSubmit = () => {};
+  return (
+    <>
+      <form onSubmit={Formik.handleSubmit}>
+        <div className="lg:flex justify-center items-center lg:ml-44 pb-20">
+          <div className="lg:mb-20">
             <p className="text-center text-xl tracking-widest py-3">
               SUPPORTING INFORMATION
             </p>
             <p className="text-center text-xl tracking-widest py-3">
-              Email Address
+              {data.Email}
             </p>
             <p className="text-center text-xl tracking-widest py-3">
-              Full Name
+              {data.FirstName} {data.LastName}
             </p>
             <p className="uppercase text-[10px] text-center tracking-[0.6px] max-w-[942px] w-[80%] mx-auto leading-6">
               YOU CAN PROVIDE ADDITIONAL (SUPPORTING) information to help us
@@ -23,28 +47,34 @@ const AddOpinion = () => {
               style={{ backgroundColor: "transparent" }}
               rows={11}
               placeholder="Supporting Information..."
-              className="w-[50vw] ml-32 my-2 placeholder:text-inputgrey text-base placeholder:text-base focus:outline-none border-1 border-inputgrey p-3 rounded-lg focus:border-1 focus:border-Date"
+              onChange={Formik.handleChange}
+              onBlur={Formik.handleBlur}
+              value={Formik.values.Opinion}
+              name="Opinion"
+              className="w-11/12 lg:w-10/12 ml-4 lg:ml-20 my-2 placeholder:text-inputgrey text-base placeholder:text-base focus:outline-none border-1 border-inputgrey p-3 rounded-lg focus:border-1 focus:border-Date"
             />
           </div>
-          <div className=" mt-52">
-            <div className="space-y-4">
-            <button
-              // onClick={onNext}
-              className="w-32 h-32  rounded-lg bg-white text-black border border-black"
-            >
-              CANCEL
-            </button>
-            <button
-              //  onClick={onNext}
-              className="w-32 h-32 rounded-lg bg-black text-white"
-            >
-              SUBMIT
-            </button>
+          <div className="lg:ml-1 lg:mt-52 flex justify-center lg:flex-col">
+            <div className="space-y-4 space-x-4 lg:space-x-0">
+              <button
+                onClick={onPrev}
+                className="w-32 h-32  rounded-lg bg-white text-black border border-black"
+              >
+                CANCEL
+              </button>
+              <button
+                type="submit"
+                //  onClick={onNext}
+                className="w-32 h-32 rounded-lg bg-black text-white"
+              >
+                SUBMIT
+              </button>
             </div>
           </div>
         </div>
-      </>
-    );
-}
- 
+      </form>
+    </>
+  );
+};
+
 export default AddOpinion;

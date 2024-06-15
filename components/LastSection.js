@@ -14,7 +14,7 @@ const LastSection = () => {
 
       <div className="bg-cover relative bg-center h-2/4 flex justify-center bg-white lg:h-screen text-black text-center">
         {" "}
-        <div className="absolute inset-0 md:-mt-[50%] -mt-[21rem] grid grid-cols-3 gap-4 ">
+        <div className="absolute inset-0 md:-mt-[50%] -mt-[50vh] grid grid-cols-3 gap-4 ">
           <div className="flex justify-center">
             {" "}
             <Image

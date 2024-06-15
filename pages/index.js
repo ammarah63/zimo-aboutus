@@ -10,6 +10,7 @@ import {
   LastSection,
   MultiStepform,
 } from "../components";
+import FormFeedback from "@/components/MultiStepForm/FormFeedback";
 
 export default function Home({ location }) {
   useEffect(() => {
@@ -23,7 +24,8 @@ export default function Home({ location }) {
       <OurCategories />
       <OneSourceSection />
       <AlertSection />
-      {/* <MultiStepform/> */}
+      <MultiStepform />
+      {/* <FormFeedback /> */}
       <GlobalSection />
       <ZimoPartnersSection />
       <LastSection />

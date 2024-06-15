@@ -4,6 +4,7 @@ import { PiArrowRightThin } from "react-icons/pi";
 import pic1 from "../public/images/Group 4764.svg";
 
 const AlertSection = () => {
+ 
   return (
     <>
       <div
