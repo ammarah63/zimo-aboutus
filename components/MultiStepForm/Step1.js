@@ -9,19 +9,18 @@ import Select from "react-select";
 
 const Step1 = ({ onNext }) => {
   const countryName = useSelector((state) => state.auth.Start.Country);
+  const data = useSelector((state) => state.auth.Step1);
   const [countryCode, setCountryCode] = useState("");
   const dispatch = useDispatch();
   const formik = useFormik({
     initialValues: {
-      email: "",
-      confirmEmail: "",
-      firstName: "",
-      lastName: "",
-      birthDate: "",
-      //  phonecode: "",
-      //  country: "",
-      phoneNumber: "",
-      zarCode: "",
+      email: (data && data.Email) || "",
+      confirmEmail: (data && data.ConfirmEmail) || "",
+      firstName: (data && data.FirstName) || "",
+      lastName: (data && data.LastName) || "",
+      birthDate: (data && data.BirthDate) || "",
+      phoneNumber: (data && data.PhoneNumber) || "",
+      zarCode: (data && data.ZarCode) || "",
     },
     validationSchema: Yup.object({
       email: Yup.string().email("Invalid email address").required("Required"),
@@ -36,6 +35,7 @@ const Step1 = ({ onNext }) => {
       phoneNumber: Yup.string().required("Required"),
       zarCode: Yup.string(),
     }),
+    enableReinitialize: true,
     onSubmit: (values) => {
       onNext();
       console.log("Form values", values);
@@ -106,7 +106,7 @@ const Step1 = ({ onNext }) => {
         <div className="lg:flex justify-center text-center ml-3 lg:ml-44 pb-20">
           <div className="lg:mb-20">
             <Input
-              placeholder="EMAIL ADDRESS"
+              placeholder={"EMAIL ADDRESS"}
               name="email"
               type="email"
               onChange={formik.handleChange}

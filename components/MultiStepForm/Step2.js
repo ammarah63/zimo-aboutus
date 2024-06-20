@@ -5,21 +5,21 @@ import Input from "../Input";
 import { useSelector, useDispatch } from "react-redux";
 import { setStep2 } from "@/redux/slices/ApplicantSlice";
 
-
 const Step2 = ({ onNext }) => {
   const data = useSelector((state) => state.auth.Step1);
+  const data2 = useSelector((state) => state.auth.Step2);
   const dispatch = useDispatch();
-  
+
   const formik = useFormik({
     initialValues: {
       email: "",
       fullName: "",
-      nationalId: "",
-      address1: "",
-      address2: "",
-      city: "",
-      state: "",
-      zipCode: "",
+      nationalId: data2 && data2.NationalId || "",
+      address1: data2 && data2.Address1 || "",
+      address2: data2 && data2.Address2 || "",
+      city: data2 && data2.City || "",
+      state: data2 && data2.State || "",
+      zipCode: data2 && data2.ZipCode || "",
     },
     validationSchema: Yup.object({
       // email: Yup.string().email("Invalid email address").required("Required"),
@@ -30,6 +30,7 @@ const Step2 = ({ onNext }) => {
       state: Yup.string().required("Required"),
       zipCode: Yup.string().required("Required"),
     }),
+    enableReinitialize: true,
     onSubmit: (values) => {
       onNext();
       dispatch(

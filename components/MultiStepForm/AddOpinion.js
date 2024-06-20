@@ -3,8 +3,8 @@ import { setAddOpinion } from "@/redux/slices/ApplicantSlice";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-const AddOpinion = ({ onPrev }) => {
-   const data = useSelector((state) => state.auth.Step1);
+const AddOpinion = ({ onPrev, handleAddopinion }) => {
+  const data = useSelector((state) => state.auth.Step1);
   const dispatch = useDispatch();
 
   const Formik = useFormik({
@@ -16,8 +16,9 @@ const AddOpinion = ({ onPrev }) => {
     }),
     onSubmit: (values) => {
       console.log(values.Opinion);
-      dispatch(setAddOpinion({values}));
+      dispatch(setAddOpinion({ values }));
       onPrev();
+      handleAddopinion();
     },
   });
 

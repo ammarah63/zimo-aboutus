@@ -9,10 +9,12 @@ import Form from "./Form";
 import Footer from "./Footer";
 import { useDispatch } from "react-redux";
 import { setStarts, setApplys } from "@/redux/slices/ApplicantSlice";
+import FormFeedback from "./FormFeedback";
 
 const MultiStepform = () => {
   const [apply, setApply] = useState(false);
   const [start, setStart] = useState(false);
+  const [thankyou, setThankyou] = useState(false);
   const [country, setCountry] = useState("");
   const [role, setRole] = useState("");
   const dispatch = useDispatch();
@@ -24,6 +26,7 @@ const MultiStepform = () => {
     validationSchema: Yup.object({
       country: Yup.string().required("Required"),
     }),
+    enableReinitialize: true,
     onSubmit: (values) => {
       handleStart();
       setCountry(values.country);
@@ -37,6 +40,7 @@ const MultiStepform = () => {
     validationSchema: Yup.object({
       role: Yup.string().required("Required"),
     }),
+    enableReinitialize: true,
     onSubmit: (values) => {
       handleApply();
       //  console.log(values.role);
@@ -45,6 +49,10 @@ const MultiStepform = () => {
       console.log("role", role);
     },
   });
+
+  const handleFeedback=()=>{
+    setThankyou(true);
+  }
 
   const handleApply = () => {
     setApply(true);
@@ -60,179 +68,189 @@ const MultiStepform = () => {
   };
 
   return (
-    <div className="relative p-4">
-      <div className="relative">
-        <p className="mt-2 ml-2 lg:ml-5 lg:mt-5 font-thin text-xl tracking-widest">
-          APPLY
-        </p>
-        {start ? (
-          <button
-            onClick={() => setStart(false)}
-            className="flex ml-2 mt-2 font-thin"
-          >
-            <PiArrowLeftThin
-              className="m-1 mt-1 lg:mt-2 h-3 w-3 lg:h-6 lg:w-6"
-              size={30}
-            />
-            <p className="text-xl my-1">BACK</p>
-          </button>
-        ) : (
-          <></>
-        )}
-        {start ? (
-          <>
-            <form onSubmit={firstStepFormik.handleSubmit}>
-              <div className="lg:relative lg:flex items-center justify-center lg:ml-32 pt-14">
-                <div className="border border-Date rounded-2xl w-full lg:w-[50vw] pb-10 lg:pb-0 p-5">
-                  <p className="text-base tracking-widest my-8 text-center">
-                    START YOUR APPLICATION
-                  </p>
-                  <div className="flex flex-col items-center">
-                    <Image
-                      src={logo}
-                      width={100}
-                      height={100}
-                      className="max-w-30 lg:min-w-64 mt-8"
-                      alt="Logo"
-                    />
-                    <p className="text-sm lg:text-6xl !font-thin text-center tracking-widest mt-4">
-                      CAREERS
-                    </p>
+    <>
+      {thankyou ? (
+        <FormFeedback />
+      ) : (
+        <div className="relative p-4">
+          <div className="relative">
+            <p className="mt-2 ml-2 lg:ml-5 lg:mt-5 font-thin text-xl tracking-widest">
+              APPLY
+            </p>
+            {start ? (
+              <button
+                onClick={() => setStart(false)}
+                className="flex ml-2 mt-2 font-thin"
+              >
+                <PiArrowLeftThin
+                  className="m-1 mt-1 lg:mt-2 h-3 w-3 lg:h-6 lg:w-6"
+                  size={30}
+                />
+                <p className="text-xl my-1">BACK</p>
+              </button>
+            ) : (
+              <></>
+            )}
+            {start ? (
+              <>
+                <form onSubmit={firstStepFormik.handleSubmit}>
+                  <div className="lg:relative lg:flex items-center justify-center lg:ml-32 pt-14">
+                    <div className="border border-Date rounded-2xl w-full lg:w-[50vw] pb-10 lg:pb-0 p-5">
+                      <p className="text-base tracking-widest my-8 text-center">
+                        START YOUR APPLICATION
+                      </p>
+                      <div className="flex flex-col items-center">
+                        <Image
+                          src={logo}
+                          width={100}
+                          height={100}
+                          className="max-w-30 lg:min-w-64 mt-8"
+                          alt="Logo"
+                        />
+                        <p className="text-sm lg:text-6xl !font-thin text-center tracking-widest mt-4">
+                          CAREERS
+                        </p>
 
-                    <>
-                      <select
-                        name="role"
-                        onChange={firstStepFormik.handleChange}
-                        onBlur={firstStepFormik.handleBlur}
-                        value={firstStepFormik.values.role}
-                        className="custom-select border-2 border-gray focus:border-Date focus:outline-none w-full active:border-gray mt-14 text-center px-6 mb-5 tracking-widest p-3 lg:w-8/12 xl:w-7/12 rounded-lg"
-                      >
-                        <option value="">CHOOSE YOUR ROLE FIELD</option>
-                        {roles.map((role) => (
-                          <option
-                            key={role.label}
-                            className="tracking-widest uppercase "
-                            value={role.value}
+                        <>
+                          <select
+                            name="role"
+                            onChange={firstStepFormik.handleChange}
+                            onBlur={firstStepFormik.handleBlur}
+                            value={firstStepFormik.values.role}
+                            className="custom-select border-2 border-gray focus:border-Date focus:outline-none w-full active:border-gray mt-14 text-center px-6 mb-5 tracking-widest p-3 lg:w-8/12 xl:w-7/12 rounded-lg"
                           >
-                            {role.label}
-                          </option>
-                        ))}
-                      </select>
-                      {firstStepFormik.touched.role &&
-                      firstStepFormik.errors.role ? (
-                        <div className="text-[red] p-0 -mt-5">
-                          {firstStepFormik.errors.role}
-                        </div>
-                      ) : null}
-                    </>
+                            <option value="">CHOOSE YOUR ROLE FIELD</option>
+                            {roles.map((role) => (
+                              <option
+                                key={role.label}
+                                className="tracking-widest uppercase "
+                                value={role.value}
+                              >
+                                {role.label}
+                              </option>
+                            ))}
+                          </select>
+                          {firstStepFormik.touched.role &&
+                          firstStepFormik.errors.role ? (
+                            <div className="text-[red] p-0 -mt-5">
+                              {firstStepFormik.errors.role}
+                            </div>
+                          ) : null}
+                        </>
+                      </div>
+                    </div>
+                    <div className="lg:hidden flex justify-center">
+                      <button
+                        //    onClick={handleApply}
+                        type="submit"
+                        className=" w-32 h-32 rounded-lg bg-black text-white -translate-y-1/3 lg:translate-y-20 lg:-translate-x-16"
+                      >
+                        APPLY
+                      </button>
+                    </div>
+                    <button
+                      //    onClick={handleApply}
+                      type="submit"
+                      className="hidden lg:block w-32 h-32 rounded-lg bg-black text-white lg:translate-y-20 lg:-translate-x-16"
+                    >
+                      APPLY
+                    </button>
                   </div>
-                </div>
-                <div className="lg:hidden flex justify-center">
-                  <button
-                    //    onClick={handleApply}
-                    type="submit"
-                    className=" w-32 h-32 rounded-lg bg-black text-white -translate-y-1/3 lg:translate-y-20 lg:-translate-x-16"
-                  >
-                    APPLY
-                  </button>
-                </div>
-                <button
-                  //    onClick={handleApply}
-                  type="submit"
-                  className="hidden lg:block w-32 h-32 rounded-lg bg-black text-white lg:translate-y-20 lg:-translate-x-16"
-                >
-                  APPLY
-                </button>
-              </div>
-            </form>
-          </>
-        ) : (
-          <>
-            <form onSubmit={secondStepFormik.handleSubmit}>
-              <div className="lg:relative lg:flex items-center justify-center lg:ml-32 pt-14">
-                <div className="border border-Date rounded-2xl w-full lg:w-[50vw] p-2 pb-10 lg:pb-0 lg:p-5">
-                  <p className="text-base tracking-widest my-8 text-center">
-                    START YOUR APPLICATION
-                  </p>
-                  <div className="flex flex-col items-center">
-                    <Image
-                      src={logo}
-                      width={100}
-                      height={100}
-                      className="max-w-30 lg:min-w-64 lg:mt-8"
-                      alt="Logo"
-                    />
-                    <h1 className="sm text-xl lg:text-6xl !font-thin text-center tracking-widest mt-4">
-                      CAREERS
-                    </h1>
+                </form>
+              </>
+            ) : (
+              <>
+                <form onSubmit={secondStepFormik.handleSubmit}>
+                  <div className="lg:relative lg:flex items-center justify-center lg:ml-32 pt-14">
+                    <div className="border border-Date rounded-2xl w-full lg:w-[50vw] p-2 pb-10 lg:pb-0 lg:p-5">
+                      <p className="text-base tracking-widest my-8 text-center">
+                        START YOUR APPLICATION
+                      </p>
+                      <div className="flex flex-col items-center">
+                        <Image
+                          src={logo}
+                          width={100}
+                          height={100}
+                          className="max-w-30 lg:min-w-64 lg:mt-8"
+                          alt="Logo"
+                        />
+                        <h1 className="sm text-xl lg:text-6xl !font-thin text-center tracking-widest mt-4">
+                          CAREERS
+                        </h1>
 
-                    <>
-                      <select
-                        name="country"
-                        onChange={secondStepFormik.handleChange}
-                        onBlur={secondStepFormik.handleBlur}
-                        value={secondStepFormik.values.country}
-                        className="custom-select uppercase border-2 border-gray focus:border-Date focus:outline-none active:border-gray mt-10 lg:mt-14 text-center px-6 mb-5 tracking-widest p-3 w-11/12 lg:w-7/12 rounded-lg"
-                      >
-                        <option value="">SELECT YOUR COUNTRY</option>
-                        {countryOptions.map((country) => (
-                          <option
-                            key={role.label}
-                            className="tracking-widest uppercase capatalize"
-                            value={country.value}
+                        <>
+                          <select
+                            name="country"
+                            onChange={secondStepFormik.handleChange}
+                            onBlur={secondStepFormik.handleBlur}
+                            value={secondStepFormik.values.country}
+                            className="custom-select uppercase border-2 border-gray focus:border-Date focus:outline-none active:border-gray mt-10 lg:mt-14 text-center px-6 mb-5 tracking-widest p-3 w-11/12 lg:w-7/12 rounded-lg"
                           >
-                            {country.label}
-                          </option>
-                        ))}
-                        {/* Add actual options here */}
-                      </select>
-                      {secondStepFormik.touched.country &&
-                      secondStepFormik.errors.country ? (
-                        <div className="text-[red] p-0 -mt-5">
-                          {secondStepFormik.errors.country}
-                        </div>
-                      ) : null}
-                    </>
+                            <option value="">SELECT YOUR COUNTRY</option>
+                            {countryOptions.map((country) => (
+                              <option
+                                key={role.label}
+                                className="tracking-widest uppercase capatalize"
+                                value={country.value}
+                              >
+                                {country.label}
+                              </option>
+                            ))}
+                            {/* Add actual options here */}
+                          </select>
+                          {secondStepFormik.touched.country &&
+                          secondStepFormik.errors.country ? (
+                            <div className="text-[red] p-0 -mt-5">
+                              {secondStepFormik.errors.country}
+                            </div>
+                          ) : null}
+                        </>
+                      </div>
+                    </div>
+                    <div className="lg:hidden flex justify-center ">
+                      <button
+                        // onClick={handleStart}
+                        type="submit"
+                        className=" w-32 h-32 rounded-lg bg-black text-white -translate-y-1/3 lg:translate-y-20 lg:-translate-x-16"
+                      >
+                        START
+                      </button>
+                    </div>
+                    <button
+                      // onClick={handleStart}
+                      type="submit"
+                      className="hidden lg:block w-32 h-32 rounded-lg bg-black text-white lg:translate-y-20 lg:-translate-x-16"
+                    >
+                      START
+                    </button>
                   </div>
-                </div>
-                <div className="lg:hidden flex justify-center ">
-                  <button
-                    // onClick={handleStart}
-                    type="submit"
-                    className=" w-32 h-32 rounded-lg bg-black text-white -translate-y-1/3 lg:translate-y-20 lg:-translate-x-16"
-                  >
-                    START
-                  </button>
-                </div>
-                <button
-                  // onClick={handleStart}
-                  type="submit"
-                  className="hidden lg:block w-32 h-32 rounded-lg bg-black text-white lg:translate-y-20 lg:-translate-x-16"
-                >
-                  START
-                </button>
-              </div>
-            </form>
-          </>
-        )}
-        <style jsx>{`
-          .custom-select {
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            background-image: url("data:image/svg+xml;base64,PHN2ZyBzdHJva2U9ImN1cnJlbnRDb2xvciIgZmlsbD0iYmxhY2siIHN0cm9rZS13aWR0aD0iMCIgdmlld0JveD0iMCAwIDI1NiAyNTYiIGhlaWdodD0iMWVtIiB3aWR0aD0iMWVtIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0yMTAuODMsOTguODNsLTgwLDgwYTQsNCwwLDAsMS01LjY2LDBsLTgwLTgwYTQsNCwwLDAsMSw1LjY2LTUuNjZMMTI4LDE3MC4zNGw3Ny4xNy03Ny4xN2E0LDQsMCwxLDEsNS42Niw1LjY2WiI+PC9wYXRoPjwvc3ZnPg=="); /* Base64 encoded SVG for dropdown arrow icon */
-            background-repeat: no-repeat;
-            background-position: right 10px center;
-            background-size: 30px 30px;
-          }
-        `}</style>
-      </div>
-      <div className="absolute top-0 w-full z-50  mb-96">
-        {" "}
-        {apply && <Form onClose={handleCloseModal} />}
-      </div>
-      <Footer />
-    </div>
+                </form>
+              </>
+            )}
+            <style jsx>{`
+              .custom-select {
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                background-image: url("data:image/svg+xml;base64,PHN2ZyBzdHJva2U9ImN1cnJlbnRDb2xvciIgZmlsbD0iYmxhY2siIHN0cm9rZS13aWR0aD0iMCIgdmlld0JveD0iMCAwIDI1NiAyNTYiIGhlaWdodD0iMWVtIiB3aWR0aD0iMWVtIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0yMTAuODMsOTguODNsLTgwLDgwYTQsNCwwLDAsMS01LjY2LDBsLTgwLTgwYTQsNCwwLDAsMSw1LjY2LTUuNjZMMTI4LDE3MC4zNGw3Ny4xNy03Ny4xN2E0LDQsMCwxLDEsNS42Niw1LjY2WiI+PC9wYXRoPjwvc3ZnPg=="); /* Base64 encoded SVG for dropdown arrow icon */
+                background-repeat: no-repeat;
+                background-position: right 10px center;
+                background-size: 30px 30px;
+              }
+            `}</style>
+          </div>
+          <div className="absolute top-0 w-full z-50  mb-96">
+            {apply && (
+              <Form
+                onClose={handleCloseModal}
+                handleFeedback={handleFeedback}
+              />
+            )}
+          </div>
+          <Footer />
+        </div>
+      )}
+    </>
   );
 };
 

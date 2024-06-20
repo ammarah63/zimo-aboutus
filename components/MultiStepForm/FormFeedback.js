@@ -8,7 +8,7 @@ const FormFeedback = () => {
   return (
     <>
       <div className="flex justify-center h-screen p-5">
-        <div className="border border-Date rounded-2xl h-4/5 w-full lg:w-[50vw] p-5">
+        <div className="border border-Date rounded-2xl h-4/5 w-full lg:w-[50vw] p-5 mt-14">
           <div className="flex flex-col items-center">
             <div className="grid grid-cols-6">
               <div></div>

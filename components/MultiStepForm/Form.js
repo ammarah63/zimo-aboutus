@@ -9,13 +9,16 @@ import FormFeedback from "./FormFeedback";
 import { PiArrowLeftThin } from "react-icons/pi";
 import Footer from "./Footer";
 
-const Form = ({ onClose }) => {
+const Form = ({ onClose , handleFeedback}) => {
   const [step, setStep] = useState(1);
   const [formSubmitted, setFormSubmitted] = useState(false);
+   const [opinionAdded, setOpinionAdded] = useState(false);
   const onNext = () => {
     setStep(step + 1);
   };
-
+const handleAddopinion=()=>{
+setOpinionAdded(true);
+}
   const onPrev = () => {
     if (step > 1) {
       setStep(step - 1);
@@ -128,16 +131,21 @@ const Form = ({ onClose }) => {
                 onNext={onNext}
                 onPrev={onPrev}
                 handleFormSubmit={handleFormSubmit}
+                handleClose={onClose}
+                handleFeedback={handleFeedback}
+                opinionAdded={opinionAdded}
               />
             )}
-            {step === 4 && <AddOpinion onNext={onNext} onPrev={onPrev} />}
+            {step === 4 && (
+              <AddOpinion
+                onNext={onNext}
+                onPrev={onPrev}
+                handleAddopinion={handleAddopinion}
+              />
+            )}
             {formSubmitted && <FormFeedback />}
           </div>
-          <div className="px-3">
-        {formSubmitted ? (
-            <></>
-          ) : (    <Footer />)}
-          </div>
+          <div className="px-3">{formSubmitted ? <></> : <Footer />}</div>
         </div>
       </div>
       <Footer />

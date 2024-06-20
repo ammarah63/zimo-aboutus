@@ -3,21 +3,44 @@ import Input from "../Input";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useSelector, useDispatch } from "react-redux";
-import { setStep3 } from "@/redux/slices/ApplicantSlice";
+import { clearApplicant, setStep3 } from "@/redux/slices/ApplicantSlice";
 import { db } from "@/firebaseConfig";
 import { storage } from "@/firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { useState } from "react";
+import { IoCheckmark } from "react-icons/io5";
 
-const Step3 = ({ onNext, handleFormSubmit }) => {
+
+const Step3 = ({
+  onNext,
+  handleFormSubmit,
+  handleClose,
+  handleFeedback,
+  opinionAdded,
+}) => {
   const data = useSelector((state) => state.auth.Step1);
+  const data3 = useSelector((state) => state.auth.Step3);
   const applications = useSelector((state) => state.auth);
+
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
 
   const handleAddopinion = () => {
     onNext();
+    dispatch(
+      setStep3({
+        Email: data.Email,
+        FullName: (data.FullName || "") + (data.LastName || ""),
+        University: formik.values.university,
+        Qualifications: formik.values.qualifications,
+        CompletionYear: formik.values.completionYear,
+        Experience: formik.values.experience,
+        EmploymentStatus: formik.values.employmentStatus,
+        Resume: formik.values.resume.name,
+      })
+    );
+    console.log(formik.values);
   };
 
   const handleSubmitMessage = async () => {
@@ -25,6 +48,7 @@ const Step3 = ({ onNext, handleFormSubmit }) => {
     try {
       // Upload resume to Firebase Storage
       const fileName = formik.values.resume.name;
+      console.log("filename", fileName);
       const storageRef = ref(storage, `${data.Email}/${fileName}`);
       await uploadBytes(storageRef, formik.values.resume);
       const resumeURL = await getDownloadURL(storageRef);
@@ -40,6 +64,9 @@ const Step3 = ({ onNext, handleFormSubmit }) => {
     } finally {
       handleFormSubmit();
       setLoading(false);
+      handleClose();
+      handleFeedback();
+      dispatch(clearApplicant());
     }
   };
 
@@ -47,12 +74,12 @@ const Step3 = ({ onNext, handleFormSubmit }) => {
     initialValues: {
       //   email: "",
       // fullName: "",
-      university: "",
-      qualifications: "",
-      completionYear: "",
-      experience: "",
-      employmentStatus: "",
-      resume: null,
+      university: (data3 && data3.University) || "",
+      qualifications: (data3 && data3.Qualifications) || "",
+      completionYear: (data3 && data3.CompletionYear) || "",
+      experience: (data3 && data3.Experience) || "",
+      employmentStatus: (data3 && data3.EmploymentStatus) || "",
+      resume: (data3 && data3.Resume) || null,
     },
     validationSchema: Yup.object({
       //  email: Yup.string().email("Invalid email").required("Email is required"),
@@ -64,10 +91,12 @@ const Step3 = ({ onNext, handleFormSubmit }) => {
       employmentStatus: Yup.string().required("Employment Status is required"),
       resume: Yup.mixed().required("Resume is required"),
     }),
+    enableReinitialize: true,
     onSubmit: async (values) => {
       // onNext();
       console.log("working");
       console.log("Form values", values);
+
       dispatch(
         setStep3({
           Email: data.Email,
@@ -90,10 +119,10 @@ const Step3 = ({ onNext, handleFormSubmit }) => {
         <div className="lg:flex justify-center text-center ml-3 lg:ml-44 pb-20">
           <div className="">
             <p className="text-center text-xl tracking-widest py-3">
-              {data.Email}
+              {data && data.Email}
             </p>
             <p className="text-center text-xl tracking-widest py-3">
-              {data.FirstName} {data.LastName}
+              {data && data.FirstName} {data && data.LastName}
             </p>
 
             <select
@@ -101,7 +130,6 @@ const Step3 = ({ onNext, handleFormSubmit }) => {
               value={formik.values.qualifications}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-          
               className="custom-select w-11/12 lg:w-[40vw] tracking-widest uppercase my-2 placeholder:text-black text-sm lg:text-lg placeholder:text-sm lg:placeholder:text-lg focus:outline-none border-1 border-inputgrey text-center p-3 rounded-lg focus:border-1 focus:border-Date"
             >
               {qualifications.map((option) => (
@@ -209,7 +237,7 @@ const Step3 = ({ onNext, handleFormSubmit }) => {
                 onChange={(event) =>
                   formik.setFieldValue("resume", event.target.files[0])
                 }
-                filename={formik.values.resume?.name}
+                filename={formik.values.resume ? formik.values.resume.name : ""}
                 onBlur={formik.handleBlur}
               />
             </div>
@@ -226,8 +254,19 @@ const Step3 = ({ onNext, handleFormSubmit }) => {
             <div className="lg:space-y-4 space-x-4 lg:space-x-0 flex lg:flex-col">
               <button
                 onClick={handleAddopinion}
-                className="w-32 h-32  rounded-lg bg-black text-white"
+                className="w-32 h-32  rounded-lg bg-black text-white flex-col justify-center"
               >
+                {opinionAdded && (
+                  <>
+                    <div className="grid grid-cols-3">
+                      <div></div>
+                      <div>
+                        <IoCheckmark size={30} className="text-Date " />
+                      </div>
+                      <div></div>
+                    </div>
+                  </>
+                )}
                 <span className="text-xs opacity-40">OPTIONAL</span> <br />
                 ADD SUPPORTING STATEMENT
               </button>
