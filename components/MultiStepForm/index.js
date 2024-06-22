@@ -72,21 +72,23 @@ const MultiStepform = () => {
       {thankyou ? (
         <FormFeedback />
       ) : (
-        <div className="relative p-4">
+        <div className="relative p-4 ">
           <div className="relative">
-            <p className="mt-2 ml-2 lg:ml-5 lg:mt-5 font-thin text-xl tracking-widest">
+            <p className="mt-2 ml-2 lg:ml-5 lg:mt-5 font-thin text-sm 3xl:text-2xl 4xl:text-4xl lg:text-xl tracking-widest">
               APPLY
             </p>
             {start ? (
               <button
                 onClick={() => setStart(false)}
-                className="flex ml-2 mt-2 font-thin"
+                className="btn flex ml-2 mt-2 font-thin items-center"
               >
                 <PiArrowLeftThin
-                  className="m-1 mt-1 lg:mt-2 h-3 w-3 lg:h-6 lg:w-6"
+                  className="mx-1 lg:mt-2 h-4 w-4 lg:h-6 lg:w-6 4xl:h-8 4xl:w-8"
                   size={30}
                 />
-                <p className="text-xl my-1">BACK</p>
+                <p className="text-sm lg:text-xl 3xl:text-2xl 4xl:text-4xl">
+                  BACK
+                </p>
               </button>
             ) : (
               <></>
@@ -94,22 +96,22 @@ const MultiStepform = () => {
             {start ? (
               <>
                 <form onSubmit={firstStepFormik.handleSubmit}>
-                  <div className="lg:relative lg:flex items-center justify-center lg:ml-32 pt-14">
-                    <div className="border border-Date rounded-2xl w-full lg:w-[50vw] pb-10 lg:pb-0 p-5">
-                      <p className="text-base tracking-widest my-8 text-center">
+                  <div className="lg:relative  4xl:mt-24 lg:flex items-center justify-center lg:ml-32 pt-14">
+                    <div className="border border-Date rounded-2xl w-full lg:w-[50vw] 3xl:p-10 4xl:p-16 pb-10 lg:pb-0 p-5">
+                      <p className="text-base 3xl:text-2xl 4xl:text-4xl tracking-widest my-8 3xl:my-12 4xl:my-20 text-center">
                         START YOUR APPLICATION
                       </p>
-                      <div className="flex flex-col items-center">
+                      <div className="flex flex-col items-center 3xl:my-8 4xl:my-14">
                         <Image
                           src={logo}
                           width={100}
                           height={100}
-                          className="max-w-30 lg:min-w-64 mt-8"
+                          className="max-w-30 lg:min-w-64 4xl:min-w-72 mt-8"
                           alt="Logo"
                         />
-                        <p className="text-sm lg:text-6xl !font-thin text-center tracking-widest mt-4">
+                        <h1 className=" text-xl lg:text-6xl !font-thin text-center tracking-widest mt-4">
                           CAREERS
-                        </p>
+                        </h1>
 
                         <>
                           <select
@@ -117,7 +119,7 @@ const MultiStepform = () => {
                             onChange={firstStepFormik.handleChange}
                             onBlur={firstStepFormik.handleBlur}
                             value={firstStepFormik.values.role}
-                            className="custom-select border-2 border-gray focus:border-Date focus:outline-none w-full active:border-gray mt-14 text-center px-6 mb-5 tracking-widest p-3 lg:w-8/12 xl:w-7/12 rounded-lg"
+                            className="custom-select uppercase border-2 border-gray 3xl:text-2xl 4xl:text-4xl focus:border-Date focus:outline-none active:border-gray mt-10 lg:mt-14 3xl:mt-20 text-center px-6 mb-5 tracking-widest p-3 w-11/12 lg:w-7/12 rounded-lg"
                           >
                             <option value="">CHOOSE YOUR ROLE FIELD</option>
                             {roles.map((role) => (
@@ -143,7 +145,7 @@ const MultiStepform = () => {
                       <button
                         //    onClick={handleApply}
                         type="submit"
-                        className=" w-32 h-32 rounded-lg bg-black text-white -translate-y-1/3 lg:translate-y-20 lg:-translate-x-16"
+                        className=" w-32 h-32 3xl:w-40 3xl:h-40 3xl:text-2xl 4xl:w-40 4xl:h-40 4xl:text-2xl rounded-lg bg-black text-white -translate-y-1/3 lg:translate-y-20 lg:-translate-x-16"
                       >
                         APPLY
                       </button>
@@ -151,7 +153,7 @@ const MultiStepform = () => {
                     <button
                       //    onClick={handleApply}
                       type="submit"
-                      className="hidden lg:block w-32 h-32 rounded-lg bg-black text-white lg:translate-y-20 lg:-translate-x-16"
+                      className="hidden lg:block 3xl:w-40 3xl:h-40 3xl:text-2xl 4xl:w-40 4xl:h-40 4xl:text-2xl w-32 h-32 rounded-lg bg-black text-white lg:translate-y-20 lg:-translate-x-16"
                     >
                       APPLY
                     </button>
@@ -161,20 +163,20 @@ const MultiStepform = () => {
             ) : (
               <>
                 <form onSubmit={secondStepFormik.handleSubmit}>
-                  <div className="lg:relative lg:flex items-center justify-center lg:ml-32 pt-14">
-                    <div className="border border-Date rounded-2xl w-full lg:w-[50vw] p-2 pb-10 lg:pb-0 lg:p-5">
-                      <p className="text-base tracking-widest my-8 text-center">
+                  <div className="lg:relative mt-7 lg:mt-10 4xl:mt-36 lg:flex items-center justify-center lg:ml-32 pt-14">
+                    <div className="border border-Date rounded-2xl w-full lg:w-[50vw] 3xl:p-10 4xl:p-16 pb-10 lg:pb-0 p-5">
+                      <p className="text-base 3xl:text-2xl 4xl:text-4xl tracking-widest my-8 3xl:my-12 4xl:my-20 text-center">
                         START YOUR APPLICATION
                       </p>
-                      <div className="flex flex-col items-center">
+                      <div className="flex flex-col items-center 3xl:my-8 4xl:my-14">
                         <Image
                           src={logo}
                           width={100}
                           height={100}
-                          className="max-w-30 lg:min-w-64 lg:mt-8"
+                          className="max-w-30 lg:min-w-64 4xl:min-w-72 mt-8"
                           alt="Logo"
                         />
-                        <h1 className="sm text-xl lg:text-6xl !font-thin text-center tracking-widest mt-4">
+                        <h1 className=" text-xl lg:text-6xl !font-thin text-center tracking-widest mt-4">
                           CAREERS
                         </h1>
 
@@ -184,13 +186,13 @@ const MultiStepform = () => {
                             onChange={secondStepFormik.handleChange}
                             onBlur={secondStepFormik.handleBlur}
                             value={secondStepFormik.values.country}
-                            className="custom-select uppercase border-2 border-gray focus:border-Date focus:outline-none active:border-gray mt-10 lg:mt-14 text-center px-6 mb-5 tracking-widest p-3 w-11/12 lg:w-7/12 rounded-lg"
+                            className="custom-select uppercase border-2 border-gray 3xl:text-2xl 4xl:text-4xl focus:border-Date focus:outline-none active:border-gray mt-10 lg:mt-14 3xl:mt-20 text-center px-6 mb-5 tracking-widest p-3 w-11/12 lg:w-7/12 rounded-lg"
                           >
                             <option value="">SELECT YOUR COUNTRY</option>
                             {countryOptions.map((country) => (
                               <option
                                 key={role.label}
-                                className="tracking-widest uppercase capatalize"
+                                className="tracking-widest uppercase capatalize "
                                 value={country.value}
                               >
                                 {country.label}
@@ -211,7 +213,7 @@ const MultiStepform = () => {
                       <button
                         // onClick={handleStart}
                         type="submit"
-                        className=" w-32 h-32 rounded-lg bg-black text-white -translate-y-1/3 lg:translate-y-20 lg:-translate-x-16"
+                        className=" w-32 h-32 3xl:w-40 3xl:h-40 3xl:text-2xl 4xl:w-40 4xl:h-40 4xl:text-2xl rounded-lg bg-black text-white -translate-y-1/3 lg:translate-y-20 lg:-translate-x-16"
                       >
                         START
                       </button>
@@ -219,7 +221,7 @@ const MultiStepform = () => {
                     <button
                       // onClick={handleStart}
                       type="submit"
-                      className="hidden lg:block w-32 h-32 rounded-lg bg-black text-white lg:translate-y-20 lg:-translate-x-16"
+                      className="hidden lg:block 3xl:w-40 3xl:h-40 3xl:text-2xl 4xl:w-40 4xl:h-40 4xl:text-2xl w-32 h-32 rounded-lg bg-black text-white lg:translate-y-20 lg:-translate-x-16"
                     >
                       START
                     </button>

@@ -40,7 +40,7 @@ const FileInput = ({ onChange, onBlur, name, filename }) => {
 
   return (
     <>
-      <div className="w-11/12 lg:w-[40vw] h-10 lg:h-12 text-sm lg:text-lg !p-0 focus:outline-none border-1 border-inputgrey !text-center px-3 rounded-lg focus:border-1 focus:border-Date cursor-pointer">
+      <div className="w-11/12 4xl:my-5 3xl:my-5 lg:w-[40vw] h-10 3xl:text-3xl 4xl:text-4xl 3xl:h-14 4xl:h-16 lg:h-12 text-sm lg:text-lg !p-0 focus:outline-none border-1 border-inputgrey !text-center px-3 rounded-lg focus:border-1 focus:border-Date cursor-pointer">
         <label htmlFor="files" className="block text-center mt-2">
           {selectedFile ? (
             <>{selectedFile.name}</>

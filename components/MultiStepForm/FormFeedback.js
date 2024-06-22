@@ -18,11 +18,11 @@ const FormFeedback = () => {
                   src={logo}
                   width={100}
                   height={100}
-                  className="w-10/12"
+                  className="w-9/12 lg:w-10/12"
                   alt="Logo"
                 />
 
-                <p className="text-4xl !font-thin tracking-widest mt-4">
+                <p className="text-sm lg:text-4xl !font-thin tracking-widest mt-2 lg:mt-4">
                   CAREERS
                 </p>
               </div>
@@ -31,7 +31,7 @@ const FormFeedback = () => {
                   src={internship}
                   width={100}
                   height={100}
-                  className="ml-auto w-full"
+                  className="ml-auto w-6/12 lg:w-full"
                   alt="internship"
                 />
               </div>

@@ -60,14 +60,14 @@ const RealStateSection = () => {
               data-aos="fade-right"
               data-aos-once="true"
             >
-              <div>
-                <p className="text-[0.6rem] md:text-xs lg:text-2xl 3xl:text-4xl 4xl:text-5xl tracking-wide md:tracking-widest 2xl:tracking-[0.11em]">
+              <div className="col-span-2 md:col-span-1 text-center md:text-left">
+                <p className="text-[0.6rem] md:text-xs lg:text-2xl 3xl:text-4xl 4xl:text-5xl tracking-[0.08em] md:tracking-widest 2xl:tracking-[0.11em]">
                   A REVOLUTIONARY PLATFORM
                 </p>
-                <p className="text-base lg:text-4xl xl:tracking-[0.17em] 4xl:tracking-[0.18em] tracking-wider md:tracking-widest 4xl:text-7xl 3xl:text-6xl md:mt-2 2xl:tracking-[0.17em] 3xl:tracking-widest">
+                <p className="text-base lg:text-4xl xl:tracking-[0.17em] 4xl:tracking-[0.18em] tracking-[0.08em] md:tracking-widest 4xl:text-7xl 3xl:text-6xl md:mt-2 2xl:tracking-[0.17em] 3xl:tracking-widest">
                   ENTRIES - SELLERS
                 </p>
-                <p className="text-lg  4xl:text-8xl tracking-[0.27em] lg:text-5xl xl:tracking-[0.27em] 3xl:text-7xl md:mt-2 2xl:tracking-[0.27em] 3xl:tracking-[0.27em]">
+                <p className="text-lg  4xl:text-8xl ml-1 md:ml-0 tracking-[0.3em] lg:text-5xl xl:tracking-[0.27em] 3xl:text-7xl md:mt-2 2xl:tracking-[0.27em] 3xl:tracking-[0.27em]">
                   WORLDWIDE
                 </p>
               </div>
@@ -76,7 +76,7 @@ const RealStateSection = () => {
             <div className="grid grid-cols-2 gap-1  !overflow-hidden">
               <div></div>
               <div
-                className="ml-auto"
+                className="md:ml-auto col-span-2 md:col-span-1 text-center"
                 data-aos="fade-left"
                 data-aos-once="true"
               >
@@ -103,7 +103,7 @@ const RealStateSection = () => {
               <div
                 data-aos="fade-right"
                 data-aos-once="true"
-                className="overflow-hidden "
+                className="overflow-hidden col-span-2 md:col-span-1 text-center md:text-left"
               >
                 <p className="text-xs md:text-sm lg:text-3xl 3xl:text-5xl 4xl:text-7xl tracking-widest">
                   THE BEST OF THE BEST
@@ -118,7 +118,7 @@ const RealStateSection = () => {
             </div>
           </div>
         </div>
-        <div className="absolute inset-x-0 bottom-5 flex justify-center">
+        <div className="absolute inset-x-0 -bottom-8 md:bottom-5 flex justify-center">
           <PiCaretDownThin
             size={75}
             className=" animate-bounce hover:animate-ping  mb-14 md:mb-0 h-8 w-8  lg:h-20 lg:w-20 4xl:h-40 4xl:w-40"

@@ -61,27 +61,31 @@ setOpinionAdded(true);
           ) : (
             <div className="grid grid-cols-6">
               <div className="col-span-2 p-3 lg:p-5">
-                <p className=" ml-5 mt-5 font-thin text-sm lg:text-xl">APPLY</p>
+                <p className=" ml-5 mt-5 font-thin text-sm 3xl:text-2xl lg:text-xl">
+                  APPLY
+                </p>
                 <div
                   onClick={onPrev}
                   className="flex ml-3 mt-2 font-thin tracking-wider"
                 >
                   <PiArrowLeftThin
-                    className="m-1 mt-1 lg:mt-2 h-3 w-3 lg:h-6 lg:w-6"
+                    className="m-1 my-2 lg:mt-2 h-4 w-4 lg:h-6 lg:w-6 3xl:w-10 3xl:h-10"
                     size={30}
                   />
                   {step === 4 ? (
-                    <p className="text-sm lg:text-xl my-1">
+                    <button className="btn text-nowrap 3xl:text-2xl text-xs md:text-sm lg:text-xl my-1">
                       BACK TO YOUR APPLICATION
-                    </p>
+                    </button>
                   ) : (
-                    <p className="text-sm lg:text-xl my-1">BACK</p>
+                    <button className="btn text-sm 3xl:text-2xl lg:text-xl my-1">
+                      BACK
+                    </button>
                   )}
                 </div>
               </div>
               <div className="col-span-4 pe-3 lg:col-span-2 flex justify-end lg:justify-center ">
                 <div>
-                  <p className="text-sm text-nowrap lg:text-xl mt-8 text-end lg:text-center tracking-widest ">
+                  <p className="text-sm  3xl:text-4xl  text-nowrap lg:text-xl mt-8 text-end lg:text-center tracking-widest ">
                     YOUR APPLICATION
                   </p>
 
@@ -90,17 +94,17 @@ setOpinionAdded(true);
                       <div
                         className={`${
                           step >= 1 ? "bg-[#BE9F56]" : "bg-black"
-                        } h-[2px] w-[30px] lg:w-[60px]`}
+                        } h-[2px] w-[30px] lg:w-[60px] 3xl:w-[80px] 3xl:h-[4px]`}
                       ></div>
                       <div
                         className={`${
                           step >= 2 ? "bg-[#BE9F56]" : "bg-black"
-                        } h-[2px] w-[30px] lg:w-[60px]`}
+                        } h-[2px] w-[30px] lg:w-[60px] 3xl:w-[80px] 3xl:h-[4px]`}
                       ></div>
                       <div
                         className={`${
                           step >= 3 ? "bg-[#BE9F56]" : "bg-black"
-                        } h-[2px] w-[30px] lg:w-[60px]`}
+                        } h-[2px] w-[30px] lg:w-[60px] 3xl:w-[80px] 3xl:h-[4px]`}
                       ></div>
                     </div>
                   </div>

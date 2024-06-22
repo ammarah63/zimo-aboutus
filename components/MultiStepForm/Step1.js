@@ -12,6 +12,32 @@ const Step1 = ({ onNext }) => {
   const data = useSelector((state) => state.auth.Step1);
   const [countryCode, setCountryCode] = useState("");
   const dispatch = useDispatch();
+
+  const customStyles = {
+    control: (base) => ({
+      ...base,
+      height: 55,
+      minHeight: 55,
+      borderRadius: 10,
+      borderColor: "#aeb2b9",
+      "@media screen and (max-width: 768px)": {
+        height: 45,
+        minHeight: 45,
+      },
+      "@media screen and (max-width: 1920px)": {
+        height: 60,
+        minHeight: 60,
+        width: 150,
+        minWidth: 150,
+      },
+      "@media screen and (max-width: 2560px)": {
+        height: 65,
+        minHeight: 65,
+        width: 180,
+        minWidth: 180,
+      },
+    }),
+  };
   const formik = useFormik({
     initialValues: {
       email: (data && data.Email) || "",
@@ -60,11 +86,11 @@ const Step1 = ({ onNext }) => {
 
   // Construct the JSX element for the placeholder
   const placeholderElement = countryPlaceholder && (
-    <div className="text-sm flex">
+    <div className="text-sm  3xl:text-3xl 4xl:text-4xl flex">
       <img
         src={`https://flagcdn.com/${countryPlaceholder.alpha2.toLowerCase()}.svg`}
         alt={`Flag of ${countryPlaceholder.alpha2}`}
-        className="h-5 w-5 mr-2"
+        className="h-5 w-5 mr-2  3xl:h-10 3xl:w-10  4xl:h-10 4xl:w-10"
       />
       {countryPlaceholder.numeric}
     </div>
@@ -73,11 +99,11 @@ const Step1 = ({ onNext }) => {
   const countryOptions = countrycode.map((option) => ({
     value: option.numeric,
     label: (
-      <div className="text-sm flex">
+      <div className="text-sm flex 3xl:text-3xl 4xl:text-4xl">
         <img
           src={`https://flagcdn.com/${option.alpha2.toLowerCase()}.svg`}
           alt={`Flag of ${option.alpha2}`}
-          className="h-5 w-5 mr-2"
+          className="h-5 w-5 3xl:h-10 3xl:w-10  4xl:h-10 4xl:w-10 mr-2"
         />
         {option.numeric}
       </div>
@@ -145,7 +171,7 @@ const Step1 = ({ onNext }) => {
                 {formik.errors.firstName}
               </p>
             ) : null}
-            <p className="text-center opacity-50 text-sm tracking-wide -mt-2 mb-2">
+            <p className="text-center opacity-50 3xl:text-xl  4xl:text-2xl text-sm tracking-wide -mt-2 mb-2">
               Use your legal name as it appears on your official documents
             </p>
             <Input
@@ -175,7 +201,7 @@ const Step1 = ({ onNext }) => {
             <Input placeholder={countryName} />
 
             <div className="grid grid-cols-3">
-              <div className="flex items-center ps-4 lg:ps-0">
+              <div className="flex items-center ps-4 lg:ps-0 3xl:ps-6 4xl:ps-8">
                 <Select
                   options={countryOptions}
                   //onChange={handleCountryChange}
@@ -183,14 +209,15 @@ const Step1 = ({ onNext }) => {
                     (option) => option.value === formik.values.phonecode
                   )}
                   placeholder={placeholderElement}
+                  styles={customStyles}
                 />
               </div>
-              <div className="col-span-2 px-2  lg:-ms-14">
+              <div className="col-span-2 px-2  lg:-ms-14 4xl:-ms-24">
                 <input
                   placeholder="PHONE NUMBER"
                   name="phoneNumber"
                   type="number"
-                  className="w-11/12 lg:w-[30vw] tracking-widest uppercase my-2 placeholder:text-black text-sm lg:text-lg placeholder:text-sm lg:placeholder:text-lg focus:outline-none border-1 border-inputgrey text-center p-3 rounded-lg focus:border-1 focus:border-Date"
+                  className="w-11/12 lg:w-[30vw] 3xl:text-3xl 3xl:placeholder:text-3xl tracking-widest uppercase my-2 placeholder:text-black text-sm lg:text-lg placeholder:text-sm lg:placeholder:text-lg focus:outline-none border-1 border-inputgrey text-center p-3 rounded-lg focus:border-1 focus:border-Date"
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   value={formik.values.phoneNumber}
@@ -203,7 +230,7 @@ const Step1 = ({ onNext }) => {
               </p>
             ) : null}
 
-            <p className="text-center opacity-50 text-xs lg:text-sm tracking-wide -mb-2 mt-2">
+            <p className="text-center opacity-50 3xl:text-xl text-xs lg:text-sm tracking-wide -mb-2 mt-2">
               ZIMO AMBASSADOR REFERRAL CODE (ZAR CODE)
             </p>
             <Input
@@ -220,10 +247,10 @@ const Step1 = ({ onNext }) => {
               </p>
             ) : null}
           </div>
-          <div className="lg:mt-96 -ms-24 lg:ms-0">
+          <div className="lg:mt-96  -ms-24 lg:ms-0">
             <button
               type="submit"
-              className="w-32 h-32 ml-20 lg:mt-20 rounded-lg bg-black text-white "
+              className="w-32 h-32 ml-20 lg:mt-20 4xl:mt-72 3xl:mt-72 3xl:w-40 3xl:h-40 3xl:text-2xl rounded-lg bg-black text-white "
             >
               CONTINUE
             </button>

@@ -30,7 +30,7 @@ const AlertSection = () => {
                   PERSONALISED FOR YOU
                 </p>
                 <div className="w-[53vw] md:w-[31vw] 4xl:ml-auto ml-auto xl:w-7/12 4xl:w-9/12 lg:w-[33vw] 3xl:w-10/12 3xl:ml-auto 2xl:w-7/12 2xl:ml-auto">
-                  <p className="text-xs lg:text-sm ml-auto text-justify 4xl:ml-auto tracking-widest md:mt-3 lg:mt-3 opacity-45 2xl:text-sm 2xl:mt-5 2xl:text-justify xl:tracking-wide lg:tracking-wide 2xl:tracking-[0.1em] 3xl:text-2xl 4xl:text-3xl 3xl:mt-9 3xl:text-justify 3xl:tracking-[0.2em] ">
+                  <p className="text-xs lg:text-sm ml-auto text-right md:text-justify 4xl:ml-auto tracking-widest md:mt-3 lg:mt-3 opacity-45 2xl:text-sm 2xl:mt-5 2xl:text-justify xl:tracking-wide lg:tracking-wide 2xl:tracking-[0.1em] 3xl:text-2xl 4xl:text-3xl 3xl:mt-9 3xl:text-justify 3xl:tracking-[0.2em] ">
                     DELIVERING THOUSANDS OF PERSONALISED ALERTS EVERYDAY, OUR
                     USERS CAN BE FIRST IN LINE WHEN THAT OPPORTUNITY OF A
                     LIFETIME IS HERE

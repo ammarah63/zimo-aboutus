@@ -14,12 +14,12 @@ const Step2 = ({ onNext }) => {
     initialValues: {
       email: "",
       fullName: "",
-      nationalId: data2 && data2.NationalId || "",
-      address1: data2 && data2.Address1 || "",
-      address2: data2 && data2.Address2 || "",
-      city: data2 && data2.City || "",
-      state: data2 && data2.State || "",
-      zipCode: data2 && data2.ZipCode || "",
+      nationalId: (data2 && data2.NationalId) || "",
+      address1: (data2 && data2.Address1) || "",
+      address2: (data2 && data2.Address2) || "",
+      city: (data2 && data2.City) || "",
+      state: (data2 && data2.State) || "",
+      zipCode: (data2 && data2.ZipCode) || "",
     },
     validationSchema: Yup.object({
       // email: Yup.string().email("Invalid email address").required("Required"),
@@ -55,8 +55,8 @@ const Step2 = ({ onNext }) => {
     <>
       <form onSubmit={formik.handleSubmit}>
         <div className="lg:flex justify-center text-center ml-3 lg:ml-44 pb-20">
-          <div className="lg:mb-20">
-            <p className="text-center text-xl tracking-widest py-3">
+          <div className="lg:mb-20 ">
+            <p className="text-center  3xl:text-3xl 4xl:text-4xl text-xl tracking-widest py-3">
               {data.Email}
             </p>
 
@@ -66,7 +66,7 @@ const Step2 = ({ onNext }) => {
               </p>
             ) : null}
 
-            <p className="text-center text-xl tracking-widest py-3">
+            <p className="text-center text-xl 3xl:text-3xl 4xl:text-4xl tracking-widest py-3">
               {data.FirstName} {data.LastName}
             </p>
 
@@ -155,10 +155,11 @@ const Step2 = ({ onNext }) => {
               </p>
             ) : null}
           </div>
+
           <div className="lg:flex -ms-10 lg:justify-end lg:items-end">
             <button
               type="submit"
-              className="w-32 h-32 ml-10 xl:ml-20 mb-20 mt-1 rounded-lg bg-black text-white"
+              className="w-32 h-32 ml-10 xl:ml-20 3xl:ml-32 3xl:w-40 3xl:h-40 3xl:text-2xl mb-20 mt-1 rounded-lg bg-black text-white"
             >
               CONTINUE
             </button>

@@ -87,7 +87,7 @@ const swiperRef = useRef(null);
           onBeforeInit={(swiper) => {
             swiperRef.current = swiper;
           }}
-          //  ref={swiper}
+          //  ref={swiper}  backdrop-brightness-50
         >
           {images.map((image, index) => (
             <SwiperSlide
@@ -106,7 +106,7 @@ const swiperRef = useRef(null);
                   className="!rounded-lg  md:min-w-[28vw] min-w-[44vw] lg:min-w-[22vw]"
                 />
               </div>
-              <div className="absolute rounded-lg inset-0 backdrop-brightness-50 flex items-end justify-center">
+              <div className="absolute rounded-lg inset-0  flex items-end justify-center">
                 <p
                   className="text-white 3xl:text-xl 4xl:text-2xl tracking-widest py-3 text-[0.6rem] lg:text-base !-mt-96 lg:py-5"
                   data-aos="fade-up"
