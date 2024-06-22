@@ -162,14 +162,14 @@ const HomeSection = ({ locationData }) => {
                   </span>
                 </p>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center 3xl:pt-2">
                 {location.countryCode && (
                   <>
                     <img
                       src={`https://flagcdn.com/${location.countryCode.toLowerCase()}.svg`}
                       width="30"
                       alt={`Flag of ${location.countryCode}`}
-                      className="lg:mx-3 md:-mt-14 ms-3 h-5 w-5 4xl:w-10 4xl:h-10 3xl:w-10 3xl:h-10 md:h-unset md:w-unset"
+                      className="lg:mx-3 md:-mt-14 lg:-mt-[4.5rem] lg:w-6 lg:h-6 ms-3 h-5 w-5 4xl:w-12 4xl:h-12 3xl:w-10 3xl:h-10 md:h-unset md:w-unset"
                     />
                   </>
                 )}
@@ -180,11 +180,11 @@ const HomeSection = ({ locationData }) => {
               {" "}
               <PiBagLight
                 size={20}
-                className="h-4 w-4 md:h-3 4xl:mt-[2.1rem] md:w-5 lg:h-5 lg:w-5 3xl:w-6 3xl:h-6 4xl:w-8 4xl:h-8"
+                className="h-4 w-4 md:h-3  md:w-5 lg:h-5 lg:w-5 3xl:w-8 3xl:h-8 4xl:w-10 4xl:h-10"
               />
               <LiaUser
                 size={20}
-                className="h-4 w-4 md:h-3 md:w-3 4xl:mt-[2.1rem] lg:h-5 lg:w-5  3xl:w-6 3xl:h-6 4xl:w-8 4xl:h-8"
+                className="h-4 w-4 md:h-3 md:w-3  lg:h-5 lg:w-5  3xl:w-8 3xl:h-8 4xl:w-10 4xl:h-10"
               />
             </div>
           </div>

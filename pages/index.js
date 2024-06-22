@@ -40,6 +40,7 @@ export async function getServerSideProps(context) {
 
   try {
     const res = await fetch(`http://ip-api.com/json/${clientIp}`);
+   // const res = await fetch(`http://ip-api.com/json/154.192.1.32`);
     const data = await res.json();
 
     if (!res.ok) {
