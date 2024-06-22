@@ -169,7 +169,7 @@ const HomeSection = ({ locationData }) => {
                       src={`https://flagcdn.com/${location.countryCode.toLowerCase()}.svg`}
                       width="30"
                       alt={`Flag of ${location.countryCode}`}
-                      className="lg:mx-3 md:-mt-14 ms-3 h-5 w-5 md:h-unset md:w-unset"
+                      className="lg:mx-3 md:-mt-14 ms-3 h-5 w-5 4xl:w-10 4xl:h-10 3xl:w-10 3xl:h-10 md:h-unset md:w-unset"
                     />
                   </>
                 )}
@@ -180,16 +180,16 @@ const HomeSection = ({ locationData }) => {
               {" "}
               <PiBagLight
                 size={20}
-                className="h-4 w-4 md:h-3 md:w-5 lg:h-5 lg:w-5 3xl:w-6 3xl:h-6 4xl:w-8 4xl:h-8"
+                className="h-4 w-4 md:h-3 4xl:mt-[2.1rem] md:w-5 lg:h-5 lg:w-5 3xl:w-6 3xl:h-6 4xl:w-8 4xl:h-8"
               />
               <LiaUser
                 size={20}
-                className="h-4 w-4 md:h-3 md:w-3 lg:h-5 lg:w-5  3xl:w-6 3xl:h-6 4xl:w-8 4xl:h-8"
+                className="h-4 w-4 md:h-3 md:w-3 4xl:mt-[2.1rem] lg:h-5 lg:w-5  3xl:w-6 3xl:h-6 4xl:w-8 4xl:h-8"
               />
             </div>
           </div>
         </div>
-     
+
         <button className="flex ml-2 lg:ml-0 4xl:text-2xl md:-mt-14 py-1 mt-4 lg:py-5 md:px-5 font-thin">
           <PiArrowLeftThin
             className=" mt-1 w-4 h-4 3xl:w-9 3xl:h-9"
