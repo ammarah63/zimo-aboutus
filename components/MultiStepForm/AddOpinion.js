@@ -37,8 +37,10 @@ const AddOpinion = ({ onPrev, handleAddopinion }) => {
             <p className="text-center text-xl 3xl:text-3xl 4xl:text-4xl tracking-widest py-3">
               {data.FirstName} {data.LastName}
             </p>
-            <p className="uppercase text-[10px] 4xl:text-base 4xl:w-full
-              text-center tracking-[0.6px] max-w-[942px] w-[80%] mx-auto leading-6">
+            <p
+              className="uppercase text-[10px] 4xl:text-base 4xl:w-full
+              text-center tracking-[0.6px] max-w-[942px] w-[80%] mx-auto leading-6"
+            >
               YOU CAN PROVIDE ADDITIONAL (SUPPORTING) information to help us
               better understand YOU AS A PERSON AND your
               qualifications/suitability for the role/program/INTERNSHIP. please
@@ -57,7 +59,7 @@ const AddOpinion = ({ onPrev, handleAddopinion }) => {
             />
           </div>
           <div className="lg:ml-1 lg:mt-52 flex justify-center lg:flex-col 3xl:flex-col">
-            <div className="lg:space-y-4 space-x-4 flex lg:space-x-0 3xl:flex-col">
+            <div className="lg:space-y-4 space-x-4 flex lg:flex-col lg:space-x-0 3xl:flex-col">
               <button
                 onClick={onPrev}
                 className="w-32 h-32 3xl:w-40 3xl:h-40 3xl:text-2xl  rounded-lg bg-white text-black border border-black"

@@ -16,34 +16,36 @@ const Step1 = ({ onNext }) => {
   const customStyles = {
     control: (base) => ({
       ...base,
-      height: 55,
-      minHeight: 55,
+      height: 45,
+      minHeight: 45,
       borderRadius: 10,
+      padding: 0,
       borderColor: "#aeb2b9",
-      "@media screen and (max-width: 768px)": {
+      "@media screen and (min-width: 768px)": {
         height: 45,
         minHeight: 45,
       },
-    
-      "@media screen and (max-width: 1366px)": {
-        height: 30,
-        minHeight: 30,
+      "@media screen and (min-width: 1024px)": {
+        height: 50,
+        minHeight: 50,
       },
-      "@media screen and (max-width: 1536px)": {
+      "@media screen and (min-width: 1366px)": {
+        height: 55,
+        minHeight: 55,
+      },
+      "@media screen and (min-width: 1536px)": {
         height: 55,
         minHeight: 55,
       },
       "@media screen and (min-width: 1920px)": {
-        height: 60,
-        minHeight: 60,
+        height: 55,
+        minHeight: 55,
         width: 150,
         minWidth: 150,
       },
       "@media screen and (min-width: 2560px)": {
         height: 65,
         minHeight: 65,
-        width: 180,
-        minWidth: 180,
       },
     }),
   };
@@ -95,11 +97,11 @@ const Step1 = ({ onNext }) => {
 
   // Construct the JSX element for the placeholder
   const placeholderElement = countryPlaceholder && (
-    <div className="text-sm 3xl:text-xl 4xl:text-4xl items-center flex">
+    <div className="text-xs lg:text-sm 3xl:text-xl 4xl:text-xl items-center flex">
       <img
         src={`https://flagcdn.com/${countryPlaceholder.alpha2.toLowerCase()}.svg`}
         alt={`Flag of ${countryPlaceholder.alpha2}`}
-        className="h-5 w-5 mr-2  3xl:h-10 3xl:w-10  4xl:h-10 4xl:w-10"
+        className="h-3 w-3 lg:h-5 lg:w-5 mr-2  3xl:h-10 3xl:w-10  4xl:h-10 4xl:w-10"
       />
       {countryPlaceholder.numeric}
     </div>
@@ -108,11 +110,11 @@ const Step1 = ({ onNext }) => {
   const countryOptions = countrycode.map((option) => ({
     value: option.numeric,
     label: (
-      <div className="text-sm flex 3xl:text-xl 4xl:text-4xl items-center">
+      <div className="text-xs lg:text-sm flex 3xl:text-xl 4xl:text-xl items-center">
         <img
           src={`https://flagcdn.com/${option.alpha2.toLowerCase()}.svg`}
           alt={`Flag of ${option.alpha2}`}
-          className="h-5 w-5 3xl:h-10 3xl:w-10  4xl:h-10 4xl:w-10 mr-2"
+          className="h-3 w-3 lg:h-5 lg:w-5 3xl:h-10 3xl:w-10  4xl:h-10 4xl:w-10 mr-2"
         />
         {option.numeric}
       </div>
@@ -209,8 +211,8 @@ const Step1 = ({ onNext }) => {
             ) : null}
             <Input placeholder={countryName} />
 
-            <div className="grid grid-cols-3">
-              <div className="flex items-center ps-4 lg:ps-0 3xl:ps-6 4xl:ps-8">
+            <div className="flex">
+              <div className="flex items-center ps-4  3xl:ps-6 4xl:ps-2">
                 <Select
                   options={countryOptions}
                   //onChange={handleCountryChange}
@@ -221,12 +223,12 @@ const Step1 = ({ onNext }) => {
                   styles={customStyles}
                 />
               </div>
-              <div className="col-span-2 px-2  lg:-ms-3 4xl:-ms-24">
+              <div className=" px-2   4xl:ms-2">
                 <input
                   placeholder="PHONE NUMBER"
                   name="phoneNumber"
                   type="number"
-                  className="w-11/12 lg:w-[27vw] 3xl:text-xl 3xl:placeholder:text-xl tracking-widest uppercase my-2 placeholder:text-black text-sm lg:text-lg placeholder:text-sm lg:placeholder:text-lg focus:outline-none border-1 border-inputgrey text-center p-3 rounded-lg focus:border-1 focus:border-Date"
+                  className="w-[60vw]  md:w-[64vw] lg:w-[30vw] 3xl:w-[32w] 4xl:w-[33vw] 3xl:text-xl 3xl:placeholder:text-xl 4xl:text-4xl 4xl:placeholder:text-4xl tracking-widest uppercase my-2 placeholder:text-black text-sm lg:text-lg placeholder:text-sm lg:placeholder:text-lg focus:outline-none border-1 border-inputgrey text-center p-3 rounded-lg focus:border-1 focus:border-Date"
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   value={formik.values.phoneNumber}
