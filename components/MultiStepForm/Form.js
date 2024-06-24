@@ -9,16 +9,16 @@ import FormFeedback from "./FormFeedback";
 import { PiArrowLeftThin } from "react-icons/pi";
 import Footer from "./Footer";
 
-const Form = ({ onClose , handleFeedback}) => {
+const Form = ({ onClose, handleFeedback }) => {
   const [step, setStep] = useState(1);
   const [formSubmitted, setFormSubmitted] = useState(false);
-   const [opinionAdded, setOpinionAdded] = useState(false);
+  const [opinionAdded, setOpinionAdded] = useState(false);
   const onNext = () => {
     setStep(step + 1);
   };
-const handleAddopinion=()=>{
-setOpinionAdded(true);
-}
+  const handleAddopinion = () => {
+    setOpinionAdded(true);
+  };
   const onPrev = () => {
     if (step > 1) {
       setStep(step - 1);
@@ -68,16 +68,20 @@ setOpinionAdded(true);
                   onClick={onPrev}
                   className="flex ml-3 mt-2 font-thin tracking-wider"
                 >
-                  <PiArrowLeftThin
-                    className="m-1 my-2 lg:mt-2 h-4 w-4 lg:h-6 lg:w-6 3xl:w-10 3xl:h-10"
-                    size={30}
-                  />
                   {step === 4 ? (
-                    <button className="btn text-nowrap 3xl:text-2xl text-xs md:text-sm lg:text-xl my-1">
+                    <button className="flex btn text-nowrap 3xl:text-2xl text-xs md:text-sm lg:text-xl my-1">
+                      <PiArrowLeftThin
+                        className="m-1  lg:mt-2 h-4 w-4 lg:h-6 lg:w-6 3xl:w-10 3xl:h-10"
+                        size={30}
+                      />{" "}
                       BACK TO YOUR APPLICATION
                     </button>
                   ) : (
-                    <button className="btn text-sm 3xl:text-2xl lg:text-xl my-1">
+                    <button className="flex btn text-sm 3xl:text-2xl lg:text-xl my-1">
+                      <PiArrowLeftThin
+                        className="m-1  lg:mt-2 h-4 w-4 lg:h-6 lg:w-6 3xl:w-10 3xl:h-10"
+                        size={30}
+                      />{" "}
                       BACK
                     </button>
                   )}
@@ -89,7 +93,7 @@ setOpinionAdded(true);
                     YOUR APPLICATION
                   </p>
 
-                  <div className="flex justify-end lg:justify-center items-center space-x-8 mt-5">
+                  <div className="flex justify-end lg:justify-center items-center space-x-8 mt-5 3xl:mt-5">
                     <div className="flex items-center justify-end gap-x-2 mt-1">
                       <div
                         className={`${
@@ -112,7 +116,7 @@ setOpinionAdded(true);
               </div>
             </div>
           )}
-          <div className="flex justify-center items-center mt-9 lg:ml-6">
+          <div className="flex justify-center items-center mt-9 lg:ml-6 3xl:mt-0">
             {step === 1 && (
               <Step1
                 //   formData={formData}

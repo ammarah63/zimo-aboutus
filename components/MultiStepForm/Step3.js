@@ -116,12 +116,12 @@ const Step3 = ({
     <>
       {" "}
       <form onSubmit={formik.handleSubmit}>
-        <div className="lg:flex justify-center 3xl:text-center text-center ml-3 lg:ml-44 pb-20">
+        <div className="lg:flex justify-center 3xl:text-center text-center ml-3 lg:ml-28 pb-20">
           <div className="">
-            <p className="text-center 3xl:text-3xl 4xl:text-4xl text-xl tracking-widest py-3">
+            <p className="text-center 3xl:text-xl 4xl:text-4xl text-xl tracking-widest py-3">
               {data && data.Email}
             </p>
-            <p className="text-center 3xl:text-3xl 4xl:text-4xl text-xl tracking-widest py-3">
+            <p className="text-center 3xl:text-xl 4xl:text-4xl text-xl tracking-widest py-3">
               {data && data.FirstName} {data && data.LastName}
             </p>
 
@@ -130,7 +130,7 @@ const Step3 = ({
               value={formik.values.qualifications}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              className="custom-select w-11/12 lg:w-[40vw] 3xl:my-5 tracking-widest 4xl:my-5 uppercase my-2 placeholder:text-black text-sm 3xl:text-3xl 4xl:text-4xl lg:text-lg placeholder:text-sm lg:placeholder:text-lg focus:outline-none border-1 border-inputgrey text-center p-3 rounded-lg focus:border-1 focus:border-Date"
+              className="custom-select w-11/12 lg:w-[40vw] 3xl:my-3 tracking-widest 4xl:my-5 uppercase my-2 placeholder:text-black text-sm 3xl:text-xl 4xl:text-4xl lg:text-lg placeholder:text-sm lg:placeholder:text-lg focus:outline-none border-1 border-inputgrey text-center p-3 rounded-lg focus:border-1 focus:border-Date"
             >
               {qualifications.map((option) => (
                 <option
@@ -154,7 +154,7 @@ const Step3 = ({
                 value={formik.values.completionYear}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                className="custom-select w-11/12 3xl:text-3xl 3xl:my-5 4xl:my-5 4xl:text-4xl lg:w-[40vw] tracking-widest uppercase my-2 placeholder:text-black text-sm lg:text-lg placeholder:text-sm lg:placeholder:text-lg focus:outline-none border-1 border-inputgrey text-center p-3 rounded-lg focus:border-1 focus:border-Date"
+                className="custom-select w-11/12 3xl:text-xl 3xl:my-3 4xl:my-5 4xl:text-4xl lg:w-[40vw] tracking-widest uppercase my-2 placeholder:text-black text-sm lg:text-lg placeholder:text-sm lg:placeholder:text-lg focus:outline-none border-1 border-inputgrey text-center p-3 rounded-lg focus:border-1 focus:border-Date"
               >
                 {completionYears.map((option) => (
                   <option
@@ -189,7 +189,7 @@ const Step3 = ({
               value={formik.values.experience}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              className="custom-select 3xl:text-3xl 4xl:my-5 3xl:my-5 4xl:text-4xl w-11/12 lg:w-[40vw] tracking-widest uppercase my-2 placeholder:text-black text-sm lg:text-lg placeholder:text-sm lg:placeholder:text-lg focus:outline-none border-1 border-inputgrey text-center p-3 rounded-lg focus:border-1 focus:border-Date"
+              className="custom-select 3xl:text-xl 4xl:my-5 3xl:my-3 4xl:text-4xl w-11/12 lg:w-[40vw] tracking-widest uppercase my-2 placeholder:text-black text-sm lg:text-lg placeholder:text-sm lg:placeholder:text-lg focus:outline-none border-1 border-inputgrey text-center p-3 rounded-lg focus:border-1 focus:border-Date"
             >
               {experienceOptions.map((option) => (
                 <option
@@ -212,7 +212,7 @@ const Step3 = ({
                 value={formik.values.employmentStatus}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                className="custom-select 3xl:text-3xl 4xl:my-5 3xl:my-5 4xl:text-4xl w-11/12 lg:w-[40vw] tracking-widest uppercase my-2 placeholder:text-black text-sm lg:text-lg placeholder:text-sm lg:placeholder:text-lg focus:outline-none border-1 border-inputgrey text-center p-3 rounded-lg focus:border-1 focus:border-Date"
+                className="custom-select 3xl:text-xl 4xl:my-5 3xl:my-3 4xl:text-4xl w-11/12 lg:w-[40vw] tracking-widest uppercase my-2 placeholder:text-black text-sm lg:text-lg placeholder:text-sm lg:placeholder:text-lg focus:outline-none border-1 border-inputgrey text-center p-3 rounded-lg focus:border-1 focus:border-Date"
               >
                 {employmentStatusOptions.map((option) => (
                   <option
@@ -231,7 +231,7 @@ const Step3 = ({
                 </div>
               ) : null}
             </div>
-            <div className="flex-col justify-center">
+            <div className="flex-col justify-center ml-3 md:ml-6 3xl:ml-8 4xl:ml-2">
               <FileInput
                 name="resume"
                 onChange={(event) =>
@@ -249,7 +249,7 @@ const Step3 = ({
             <p className="text-center opacity-50 4xl:text-lg text-xs lg:text-sm tracking-wide mb-2 mt-2">
               UPLOAD YOUR RÉSUMÉ IN ENGLISH AS DOCX OR PDF ONLY
             </p>
-            <p className="text-center opacity-50 text-xs lg:text-sm xl:text-xl w-[350px] lg:w-[500px] 3xl:w-[780px]  4xl:w-[1000px] 4xl:text-lg tracking-wide mb-2 mt-2">
+            <p className="text-center opacity-50 text-xs lg:text-sm xl:text-xl w-[350px] lg:w-[600px] md:w-[650px] 3xl:w-[830px]  4xl:w-[1000px] 4xl:text-lg tracking-wide mb-2 mt-2">
               By proceeding, you are confirming that you agree to the
               information you have provided to be used in accordance with
               ZIMO&apos;S application processes

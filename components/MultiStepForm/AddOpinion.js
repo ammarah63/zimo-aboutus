@@ -57,7 +57,7 @@ const AddOpinion = ({ onPrev, handleAddopinion }) => {
             />
           </div>
           <div className="lg:ml-1 lg:mt-52 flex justify-center lg:flex-col 3xl:flex-col">
-            <div className="space-y-4 space-x-4 lg:space-x-0 3xl:flex-col">
+            <div className="lg:space-y-4 space-x-4 flex lg:space-x-0 3xl:flex-col">
               <button
                 onClick={onPrev}
                 className="w-32 h-32 3xl:w-40 3xl:h-40 3xl:text-2xl  rounded-lg bg-white text-black border border-black"

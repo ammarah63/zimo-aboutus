@@ -24,13 +24,22 @@ const Step1 = ({ onNext }) => {
         height: 45,
         minHeight: 45,
       },
-      "@media screen and (max-width: 1920px)": {
+    
+      "@media screen and (max-width: 1366px)": {
+        height: 30,
+        minHeight: 30,
+      },
+      "@media screen and (max-width: 1536px)": {
+        height: 55,
+        minHeight: 55,
+      },
+      "@media screen and (min-width: 1920px)": {
         height: 60,
         minHeight: 60,
         width: 150,
         minWidth: 150,
       },
-      "@media screen and (max-width: 2560px)": {
+      "@media screen and (min-width: 2560px)": {
         height: 65,
         minHeight: 65,
         width: 180,
@@ -86,7 +95,7 @@ const Step1 = ({ onNext }) => {
 
   // Construct the JSX element for the placeholder
   const placeholderElement = countryPlaceholder && (
-    <div className="text-sm  3xl:text-3xl 4xl:text-4xl flex">
+    <div className="text-sm 3xl:text-xl 4xl:text-4xl items-center flex">
       <img
         src={`https://flagcdn.com/${countryPlaceholder.alpha2.toLowerCase()}.svg`}
         alt={`Flag of ${countryPlaceholder.alpha2}`}
@@ -99,7 +108,7 @@ const Step1 = ({ onNext }) => {
   const countryOptions = countrycode.map((option) => ({
     value: option.numeric,
     label: (
-      <div className="text-sm flex 3xl:text-3xl 4xl:text-4xl">
+      <div className="text-sm flex 3xl:text-xl 4xl:text-4xl items-center">
         <img
           src={`https://flagcdn.com/${option.alpha2.toLowerCase()}.svg`}
           alt={`Flag of ${option.alpha2}`}
@@ -212,12 +221,12 @@ const Step1 = ({ onNext }) => {
                   styles={customStyles}
                 />
               </div>
-              <div className="col-span-2 px-2  lg:-ms-14 4xl:-ms-24">
+              <div className="col-span-2 px-2  lg:-ms-3 4xl:-ms-24">
                 <input
                   placeholder="PHONE NUMBER"
                   name="phoneNumber"
                   type="number"
-                  className="w-11/12 lg:w-[30vw] 3xl:text-3xl 3xl:placeholder:text-3xl tracking-widest uppercase my-2 placeholder:text-black text-sm lg:text-lg placeholder:text-sm lg:placeholder:text-lg focus:outline-none border-1 border-inputgrey text-center p-3 rounded-lg focus:border-1 focus:border-Date"
+                  className="w-11/12 lg:w-[27vw] 3xl:text-xl 3xl:placeholder:text-xl tracking-widest uppercase my-2 placeholder:text-black text-sm lg:text-lg placeholder:text-sm lg:placeholder:text-lg focus:outline-none border-1 border-inputgrey text-center p-3 rounded-lg focus:border-1 focus:border-Date"
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   value={formik.values.phoneNumber}
@@ -247,10 +256,10 @@ const Step1 = ({ onNext }) => {
               </p>
             ) : null}
           </div>
-          <div className="lg:mt-96  -ms-24 lg:ms-0">
+          <div className="lg:mt-96 3xl:mt-[18rem] -ms-24 lg:ms-0">
             <button
               type="submit"
-              className="w-32 h-32 ml-20 lg:mt-20 4xl:mt-72 3xl:mt-72 3xl:w-40 3xl:h-40 3xl:text-2xl rounded-lg bg-black text-white "
+              className="w-32 h-32 ml-20 lg:mt-20 4xl:mt-72 3xl:mt-48 3xl:w-40 3xl:h-40 3xl:text-2xl rounded-lg bg-black text-white "
             >
               CONTINUE
             </button>

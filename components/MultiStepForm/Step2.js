@@ -156,7 +156,7 @@ const Step2 = ({ onNext }) => {
             ) : null}
           </div>
 
-          <div className="lg:flex -ms-10 lg:justify-end lg:items-end">
+          <div className="lg:flex -ms-10 lg:ms-0 lg:justify-end lg:items-end">
             <button
               type="submit"
               className="w-32 h-32 ml-10 xl:ml-20 3xl:ml-32 3xl:w-40 3xl:h-40 3xl:text-2xl mb-20 mt-1 rounded-lg bg-black text-white"
