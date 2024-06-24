@@ -83,7 +83,7 @@ const MultiStepform = () => {
                 className="btn flex ml-2 mt-2 font-thin items-center"
               >
                 <PiArrowLeftThin
-                  className="mx-1 lg:mt-2 h-4 w-4 lg:h-6 lg:w-6 4xl:h-8 4xl:w-8"
+                  className="mx-1 h-4 w-4 lg:h-6 lg:w-6 4xl:h-8 4xl:w-8"
                   size={30}
                 />
                 <p className="text-sm lg:text-xl 3xl:text-2xl 4xl:text-4xl">
@@ -163,7 +163,7 @@ const MultiStepform = () => {
             ) : (
               <>
                 <form onSubmit={secondStepFormik.handleSubmit}>
-                  <div className="lg:relative mt-7 lg:mt-10 4xl:mt-36 lg:flex items-center justify-center lg:ml-32 pt-14">
+                  <div className="lg:relative mt-7 lg:mt-9 4xl:mt-36 lg:flex items-center justify-center lg:ml-32 pt-14">
                     <div className="border border-Date rounded-2xl w-full lg:w-[50vw] 3xl:p-10 4xl:p-16 pb-10 lg:pb-0 p-5">
                       <p className="text-base 3xl:text-2xl 4xl:text-4xl tracking-widest my-8 3xl:my-12 4xl:my-20 text-center">
                         START YOUR APPLICATION

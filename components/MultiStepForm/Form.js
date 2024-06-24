@@ -71,7 +71,7 @@ const Form = ({ onClose, handleFeedback }) => {
                   {step === 4 ? (
                     <button className="flex btn text-nowrap 3xl:text-2xl text-xs md:text-sm lg:text-xl my-1">
                       <PiArrowLeftThin
-                        className="m-1  lg:mt-2 h-4 w-4 lg:h-6 lg:w-6 3xl:w-10 3xl:h-10"
+                        className="m-1 h-4 w-4 lg:h-6 lg:w-6 3xl:w-7 3xl:h-7"
                         size={30}
                       />{" "}
                       BACK TO YOUR APPLICATION
@@ -79,7 +79,7 @@ const Form = ({ onClose, handleFeedback }) => {
                   ) : (
                     <button className="flex btn text-sm 3xl:text-2xl lg:text-xl my-1">
                       <PiArrowLeftThin
-                        className="m-1  lg:mt-2 h-4 w-4 lg:h-6 lg:w-6 3xl:w-10 3xl:h-10"
+                        className="m-1 h-4 w-4 lg:h-6 lg:w-6 3xl:w-7 3xl:h-7"
                         size={30}
                       />{" "}
                       BACK

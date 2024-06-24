@@ -18,6 +18,8 @@ const Step1 = ({ onNext }) => {
       ...base,
       height: 45,
       minHeight: 45,
+      width: 95,
+      minWidth: 95,
       borderRadius: 10,
       padding: 0,
       borderColor: "#aeb2b9",
@@ -28,24 +30,30 @@ const Step1 = ({ onNext }) => {
       "@media screen and (min-width: 1024px)": {
         height: 50,
         minHeight: 50,
+        width: 105,
+        minWidth: 105,
       },
       "@media screen and (min-width: 1366px)": {
         height: 55,
         minHeight: 55,
+        width: 115,
+        minWidth: 115,
       },
       "@media screen and (min-width: 1536px)": {
         height: 55,
         minHeight: 55,
       },
       "@media screen and (min-width: 1920px)": {
-        height: 55,
-        minHeight: 55,
-        width: 150,
-        minWidth: 150,
+        height: 53,
+        minHeight: 53,
+        width: 157,
+        minWidth: 157,
       },
       "@media screen and (min-width: 2560px)": {
         height: 65,
         minHeight: 65,
+        width: 165,
+        minWidth: 165,
       },
     }),
   };
@@ -211,8 +219,8 @@ const Step1 = ({ onNext }) => {
             ) : null}
             <Input placeholder={countryName} />
 
-            <div className="flex">
-              <div className="flex items-center ps-4  3xl:ps-6 4xl:ps-2">
+            <div className="flex space-x-3 justify-center">
+              <div className="flex items-center">
                 <Select
                   options={countryOptions}
                   //onChange={handleCountryChange}
@@ -223,12 +231,12 @@ const Step1 = ({ onNext }) => {
                   styles={customStyles}
                 />
               </div>
-              <div className=" px-2   4xl:ms-2">
+              <div className="">
                 <input
                   placeholder="PHONE NUMBER"
                   name="phoneNumber"
                   type="number"
-                  className="w-[60vw]  md:w-[64vw] lg:w-[30vw] 3xl:w-[32w] 4xl:w-[33vw] 3xl:text-xl 3xl:placeholder:text-xl 4xl:text-4xl 4xl:placeholder:text-4xl tracking-widest uppercase my-2 placeholder:text-black text-sm lg:text-lg placeholder:text-sm lg:placeholder:text-lg focus:outline-none border-1 border-inputgrey text-center p-3 rounded-lg focus:border-1 focus:border-Date"
+                  className="w-[55vw]  md:w-[64vw] lg:w-[28vw] xl:w-[31vw] 3xl:w-[32w] 4xl:w-[33vw] 3xl:text-xl 3xl:placeholder:text-xl 4xl:text-4xl 4xl:placeholder:text-4xl tracking-widest uppercase my-2 placeholder:text-black text-sm lg:text-lg placeholder:text-sm lg:placeholder:text-lg focus:outline-none border-1 border-inputgrey text-center p-3 rounded-lg focus:border-1 focus:border-Date"
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   value={formik.values.phoneNumber}
