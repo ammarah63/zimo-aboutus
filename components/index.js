@@ -6,7 +6,20 @@ import OneSourceSection from "./OneSourceSection";
 import AlertSection from "./AlertSection";
 import GlobalSection from "./GlobalSection";
 import ZimoPartnersSection from "./ZimoPartnersSection";
-import LastSection from "./LastSection"
+import LastSection from "./LastSection";
 import MultiStepform from "./MultiStepForm";
 
-export { HomeSection, MultiStepform, OneSourceSection, ZimoPartnersSection, LastSection, OurCategories, RealStateSection, AlertSection, GlobalSection };
+import ReactTable from "./Table/ReactTable";
+
+export {
+  HomeSection,
+  ReactTable,
+  MultiStepform,
+  OneSourceSection,
+  ZimoPartnersSection,
+  LastSection,
+  OurCategories,
+  RealStateSection,
+  AlertSection,
+  GlobalSection,
+};
