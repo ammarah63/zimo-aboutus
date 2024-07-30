@@ -9,11 +9,11 @@ import ZimoPartnersSection from "./ZimoPartnersSection";
 import LastSection from "./LastSection";
 import MultiStepform from "./MultiStepForm";
 
-import ReactTable from "./Table/ReactTable";
+
 
 export {
   HomeSection,
-  ReactTable,
+
   MultiStepform,
   OneSourceSection,
   ZimoPartnersSection,
